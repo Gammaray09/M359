@@ -5,6 +5,7 @@ public class PizzaTester {
         Pizza pizza1 = new Pizza("Dominos", 12, 3, true);
         Pizza pizza2 = new Pizza("Pizza Hut", 6, false);
         Pizza pizza3 = new Pizza("Pizza Hut", 14, 2, true);
+        Pizza pizza4 = new Pizza("Papa Johns", 14, 5, false);
 
      //print pizza objects using the methods we wrote
         pizza1.printInfo();
