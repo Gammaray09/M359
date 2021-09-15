@@ -1,5 +1,7 @@
 package Unit3_Booleans_IfStatements.examples.review;
 
+
+// review class
 public class Review {
     private String reviewName;
     private String businessName;
