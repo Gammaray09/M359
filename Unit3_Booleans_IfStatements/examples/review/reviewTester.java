@@ -1,5 +1,6 @@
 package Unit3_Booleans_IfStatements.examples.review;
 
+
 public class reviewTester {
     public static void main(String[] args) {
         Review kg = new Review("Ken Goettsche", "Olive Garden", 1);
@@ -7,10 +8,10 @@ public class reviewTester {
         Review sd = new Review("Shannon Denna", "Panera", 3);
         Review jm = new Review("Jerry Moon", "Kura", 5);
 
-        System.out.println(kg);
-        System.out.println(cn);
-        System.out.println(sd);
-        System.out.println(jm);
+        System.out.println(kg + "\n");
+        System.out.println(cn + "\n");
+        System.out.println(sd + "\n");
+        System.out.println(jm + "\n");
     }
 
 }
