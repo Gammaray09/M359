@@ -26,7 +26,20 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.compound_boolean">
+    <configuration name="compound_boolean" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Unit3_Booleans_IfStatements.examples.compound_boolean" />
+      <module name="M359" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Unit3_Booleans_IfStatements.examples.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="reviewTester" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Unit3_Booleans_IfStatements.examples.review.reviewTester" />
       <module name="M359" />
@@ -42,6 +55,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.compound_boolean" />
         <item itemvalue="Application.reviewTester" />
       </list>
     </recent_temporary>
