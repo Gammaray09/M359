@@ -54,6 +54,12 @@ public class Pizza {
 
     }
 
+    public int compareTo(Pizza other){
+     return (this.inches - other.inches);
+    }
+
+
+
 
     public String toString() {
         return "Pizza{" + "store='" + store + '\'' + ", inches=" + inches + ", numToppings=" + numToppings + ", isDeepDish=" + isDeepDish + '}';
