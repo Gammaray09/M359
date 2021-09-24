@@ -88,16 +88,16 @@ public class Chevy {
     public double calcPrice(){
         double total = price;
         if(luxStatus == true && a4WDStatus == true && sportsStatus == true){
-            total = (total * LUX_PRICE + total) + (total + FOUR_WD) + (total * SPORTS_PRICE + total);
+            total = (total * LUX_PRICE + total) + (total + FOUR_WD) + (total * SPORTS_PRICE + total) +(total * TAX_RATE + total);
             return total;
         } else if(luxStatus == true && a4WDStatus == true){
-            total = (total * LUX_PRICE + total) + (total + FOUR_WD);
+            total = (total * LUX_PRICE + total) + (total + FOUR_WD)+(total * TAX_RATE + total);
             return total;
         } else if (luxStatus == true){
-            total = (total * LUX_PRICE + total);
+            total = (total * LUX_PRICE + total)+(total * TAX_RATE + total);
             return total;
         } else {
-            return total;
+            return (total * TAX_RATE + total);
         }
     }
 
