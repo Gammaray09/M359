@@ -12,11 +12,12 @@ public class Chevy {
     private boolean sportsStatus;
 
     //constants
-    final double TAX_RATE = 0.122;
-    final double LUX_PRICE = 0.2;
+    final String VEHICLE_MAKE = "Chevrolet";
+    final double TAX_RATE = 1.122;
+    final double LUX_PRICE = 1.2;
     final int FOUR_WD = 3500;
-    final double SPORTS_PRICE = 0.15;
-    final double FUEL_EFFICIENCY_DEDUC = 0.2;
+    final double SPORTS_PRICE = 1.15;
+    final double FUEL_EFFICIENCY_DEDUCT = 0.2;
 
     //Constructors
     public Chevy() {
@@ -86,18 +87,15 @@ public class Chevy {
     }
 
     public double calcPrice(){
-        double total = price;
-        if(luxStatus == true && a4WDStatus == true && sportsStatus == true){
-            total = (total * LUX_PRICE + total) + (total + FOUR_WD) + (total * SPORTS_PRICE + total) +(total * TAX_RATE + total);
-            return total;
-        } else if(luxStatus == true && a4WDStatus == true){
-            total = (total * LUX_PRICE + total) + (total + FOUR_WD)+(total * TAX_RATE + total);
-            return total;
-        } else if (luxStatus == true){
-            total = (total * LUX_PRICE + total)+(total * TAX_RATE + total);
-            return total;
-        } else {
-            return (total * TAX_RATE + total);
+        if(luxStatus == true){
+            this.price *= LUX_PRICE;
+        }
+        if(a4WDStatus == true){
+            this.price += FOUR_WD;
+        }
+        if(sportsStatus == true){
+            this.price *= SPORTS_PRICE;
+            this.fuelEfficiency = this.fuelEfficiency * FUEL_EFFICIENCY_DEDUCT - this.fuelEfficiency;
         }
     }
 
