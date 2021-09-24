@@ -25,6 +25,12 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="Unit3_Booleans_IfStatements.Homework.ChevroletLab" />
+    </key>
   </component>
   <component name="RunManager" selected="Application.StudentTester">
     <configuration name="StudentTester" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
