@@ -71,13 +71,13 @@ public class Chevy {
     public String toString(){
         String packages = "";
         if(luxStatus == true && a4WDStatus == true && sportsStatus == true){
-            packages = "\t-Luxary Package\n\t-4WD Package\n\t-Sports Package";
+            packages = "\t\t-Luxary Package\n\t\t-4WD Package\n\t\t-Sports Package";
         } else if(luxStatus == true && a4WDStatus == true){
-            packages = "\t-Luxary Package\n\t-4WD Package";
+            packages = "\t\t-Luxary Package\n\t\t-4WD Package";
         } else if (luxStatus == true){
-            packages = "\t-Luxary Package";
+            packages = "\t\t-Luxary Package";
         } else {
-            packages = "\t-None";
+            packages = "\t\t-None";
         }
 
         String output = year + " " + model + " (" + color + ")\n\t PRICE: \t" + price + "\n\t MILES:\t" +
