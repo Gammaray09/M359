@@ -17,14 +17,13 @@ public class ChevyDriverStudent {
         traxLux.setA4WDStatus(true);
 
 
-
         // Printouts
         System.out.println("*** VEHICLE PRINTOUTS ***");
         System.out.println(traxBase);
         System.out.println(traxLux);
 
         // Display price comparison
-        System.out.println("*** COMPARE BY PRICE ***");
+        System.out.println("\n*** COMPARE BY PRICE ***");
         System.out.println("\tClassic Corvette vs. Sport Corvette");
         System.out.print("\tLowest price:\t");
 

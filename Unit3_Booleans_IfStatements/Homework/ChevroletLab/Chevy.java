@@ -80,7 +80,7 @@ public class Chevy {
             packages = "\t\t\t-None";
         }
 
-        String output = year + " " + model + " (" + color + ")\n\t PRICE: \t" + price + "\n\t MILES:\t" +
+        String output = year + " " + model + " (" + color + ")\n\t PRICE: \t\t\t" + price + "\n\t MILES:\t\t\t\t" +
                 mileage + "\n\t FUEL EFFICIENCY:\t" + fuelEfficiency + "mpg" +"\n\t PACKAGES:\n" + packages;
         return output;
     }
