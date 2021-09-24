@@ -87,16 +87,18 @@ public class Chevy {
     }
 
     public double calcPrice(){
+        double total = 0;
         if(luxStatus == true){
-            this.price *= LUX_PRICE;
+            total = this.price *= LUX_PRICE;
         }
         if(a4WDStatus == true){
-            this.price += FOUR_WD;
+            total=  this.price + FOUR_WD;
         }
         if(sportsStatus == true){
-            this.price *= SPORTS_PRICE;
+            total = this.price *= SPORTS_PRICE;
             this.fuelEfficiency = this.fuelEfficiency * FUEL_EFFICIENCY_DEDUCT - this.fuelEfficiency;
         }
+        return total;
     }
 
     // Getters and Setters
