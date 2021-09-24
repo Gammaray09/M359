@@ -1,8 +1,7 @@
 package Unit3_Booleans_IfStatements.Homework.ChevroletLab;
 
 public class ChevyDriverStudent {
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         // Create objects
         Chevy traxBase = new Chevy();
         Chevy traxLux = new Chevy();
@@ -11,9 +10,11 @@ public class ChevyDriverStudent {
 
         // *** UTILIZE SETTER METHODS TO COMPLETE THE FOLLOWING: ***
         // Set traxBase mileage to 15
-
+        traxBase.setMileage(15);
         // Set traxLux mileage to 175 with both a luxury and 4WD package
-
+        traxLux.setMileage(15);
+        traxLux.setLuxStatus(true);
+        traxLux.setA4WDStatus(true);
 
 
 
@@ -28,9 +29,9 @@ public class ChevyDriverStudent {
         System.out.print("\tLowest price:\t");
 
         // *** COMPLETE THE FOLLOWING DECISION STATEMENTS ***
-        if (_________________________________)
+        if (corvetteClassic.compareTo(corvetteSport) > 0)
             System.out.println("Classic Corvette at $" + corvetteClassic.getPrice());
-        else if (_________________________________)
+        else if (corvetteClassic.compareTo(corvetteSport) < 0)
             System.out.println("Sport Corvette at $" + corvetteSport.getPrice());
         else
             System.out.println("Tie at $" + corvetteClassic.getPrice());
@@ -41,7 +42,7 @@ public class ChevyDriverStudent {
         System.out.print("\tStatus:\t");
 
         // *** COMPLETE THE FOLLOWING DECISION STATEMENTS ***
-        if (_________________________________)
+        if (traxBase.equal(traxLux))
             System.out.println("Same car");
         else
             System.out.println("Not same car");
