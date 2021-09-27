@@ -16,7 +16,8 @@ public class ChevyDriverStudent {
         traxLux.setLuxStatus(true);
         traxLux.setA4WDStatus(true);
 
-
+        System.out.println("Original Price is $" + traxBase.getPrice());
+        System.out.println("Final price of Trax Base is: $" + traxBase.calcPrice());
         // Printouts
         System.out.println("*** VEHICLE PRINTOUTS ***");
         System.out.println(traxBase);

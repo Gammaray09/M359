@@ -13,10 +13,10 @@ public class Chevy {
 
     //constants
     final String VEHICLE_MAKE = "Chevrolet";
-    final double TAX_RATE = 1.122;
-    final double LUX_PRICE = 1.2;
+    final double TAX_RATE = 0.122;
+    final double LUX_PRICE = 0.2;
     final int FOUR_WD = 3500;
-    final double SPORTS_PRICE = 1.15;
+    final double SPORTS_PRICE = 0.15;
     final double FUEL_EFFICIENCY_DEDUCT = 0.2;
 
     //Constructors
@@ -71,32 +71,38 @@ public class Chevy {
 
     public String toString(){
         String packages = "";
-        if(luxStatus == true && a4WDStatus == true && sportsStatus == true){
-            packages = "\t\t\t-Luxary Package\n\t\t\t-4WD Package\n\t\t\t-Sports Package";
-        } else if(luxStatus == true && a4WDStatus == true){
-            packages = "\t\t\t-Luxary Package\n\t\t\t-4WD Package";
-        } else if (luxStatus == true){
-            packages = "\t\t\t-Luxary Package";
-        } else {
+        if(luxStatus == true){
+            packages += "\t\t\t-Luxary Package";
+        }
+        if(a4WDStatus == true){
+            packages += "\n\t\t\t-4WD Package";
+        }
+        if (sportsStatus == true){
+            packages += "\t\t\t-Sports Package";
+        }
+        if(luxStatus == false && a4WDStatus == false && sportsStatus == false) {
             packages = "\t\t\t-None";
         }
 
-        String output = year + " " + model + " (" + color + ")\n\t PRICE: \t\t\t" + price + "\n\t MILES:\t\t\t\t" +
+        String output = year + " " + VEHICLE_MAKE + " " + model + " (" + color + ")\n\t PRICE: \t\t\t" + price + "\n\t MILES:\t\t\t\t" +
                 mileage + "\n\t FUEL EFFICIENCY:\t" + fuelEfficiency + "mpg" +"\n\t PACKAGES:\n" + packages;
         return output;
     }
 
     public double calcPrice(){
+        double total = this.price;
         if(luxStatus == true){
-            this.price *= LUX_PRICE;
+            total = (this.price * LUX_PRICE) + this.price;
         }
         if(a4WDStatus == true){
-            this.price += FOUR_WD;
+            total = this.price + FOUR_WD;
         }
         if(sportsStatus == true){
-            this.price *= SPORTS_PRICE;
+            total = (this.price * SPORTS_PRICE) + this.price;
             this.fuelEfficiency = this.fuelEfficiency * FUEL_EFFICIENCY_DEDUCT - this.fuelEfficiency;
         }
+        total = (total * TAX_RATE) + total;
+        return total;
     }
 
     // Getters and Setters
