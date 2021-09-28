@@ -90,7 +90,7 @@ public class Chevy {
     }
 
     public double calcPrice(){
-<<<<<<< HEAD
+
         double total = this.price;
         if(luxStatus == true){
             total = (this.price * LUX_PRICE) + this.price;
@@ -103,19 +103,6 @@ public class Chevy {
             this.fuelEfficiency = this.fuelEfficiency * FUEL_EFFICIENCY_DEDUCT - this.fuelEfficiency;
         }
         total = (total * TAX_RATE) + total;
-=======
-        double total = 0;
-        if(luxStatus == true){
-            total = this.price *= LUX_PRICE;
-        }
-        if(a4WDStatus == true){
-            total=  this.price + FOUR_WD;
-        }
-        if(sportsStatus == true){
-            total = this.price *= SPORTS_PRICE;
-            this.fuelEfficiency = this.fuelEfficiency * FUEL_EFFICIENCY_DEDUCT - this.fuelEfficiency;
-        }
->>>>>>> d6c3b78cb15b513ce90f74847b5c41445b31d154
         return total;
     }
 
