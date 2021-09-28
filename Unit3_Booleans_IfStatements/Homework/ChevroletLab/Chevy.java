@@ -4,7 +4,7 @@ public class Chevy {
     private int year;
     private int mileage;
     private double fuelEfficiency;
-    private int price;
+    private double price;
     private String model;
     private String color;
     private boolean luxStatus;
@@ -24,7 +24,7 @@ public class Chevy {
         this.year = 2021;
         this.mileage = 0;
         this.fuelEfficiency = 35;
-        this.price = 16000;
+        this.price = 16000.0;
         this.model = "Trax";
         this.color = "white";
         this.luxStatus = false;
@@ -46,7 +46,7 @@ public class Chevy {
     }
 
     //methods
-    public int compareTo(Chevy other){ return this.price - other.price;}
+    public double compareTo(Chevy other){ return this.price - other.price;}
 
     public boolean equal(Chevy other){
         String vehicle1 = "";
@@ -69,7 +69,27 @@ public class Chevy {
         }
     }
 
+
+    public double calcPrice(){
+        double total = this.price;
+        if(luxStatus == true){
+            total = (this.price * LUX_PRICE) + this.price;
+        }
+        if(a4WDStatus == true){
+            total += FOUR_WD;
+        }
+        if(sportsStatus == true){
+            total = (this.price * SPORTS_PRICE) + this.price;
+            this.fuelEfficiency = this.fuelEfficiency * FUEL_EFFICIENCY_DEDUCT - this.fuelEfficiency;
+        }
+        total = (total * TAX_RATE) + total;
+        return total;
+    }
+
+
     public String toString(){
+        double aPrice = this.calcPrice();
+
         String packages = "";
         if(luxStatus == true){
             packages += "\t\t\t-Luxary Package";
@@ -84,26 +104,9 @@ public class Chevy {
             packages = "\t\t\t-None";
         }
 
-        String output = year + " " + VEHICLE_MAKE + " " + model + " (" + color + ")\n\t PRICE: \t\t\t" + price + "\n\t MILES:\t\t\t\t" +
+        String output = year + " " + VEHICLE_MAKE + " " + model + " (" + color + ")\n\t PRICE: \t\t\t" + aPrice + "\n\t MILES:\t\t\t\t" +
                 mileage + "\n\t FUEL EFFICIENCY:\t" + fuelEfficiency + "mpg" +"\n\t PACKAGES:\n" + packages;
         return output;
-    }
-
-    public double calcPrice(){
-
-        double total = this.price;
-        if(luxStatus == true){
-            total = (this.price * LUX_PRICE) + this.price;
-        }
-        if(a4WDStatus == true){
-            total = this.price + FOUR_WD;
-        }
-        if(sportsStatus == true){
-            total = (this.price * SPORTS_PRICE) + this.price;
-            this.fuelEfficiency = this.fuelEfficiency * FUEL_EFFICIENCY_DEDUCT - this.fuelEfficiency;
-        }
-        total = (total * TAX_RATE) + total;
-        return total;
     }
 
     // Getters and Setters
@@ -113,7 +116,7 @@ public class Chevy {
     public void setMileage(int mileage) { this.mileage = mileage; }
     public double getFuelEfficiency() { return fuelEfficiency; }
     public void setFuelEfficiency(double fuelEfficiency) { this.fuelEfficiency = fuelEfficiency; }
-    public int getPrice() { return price; }
+    public double getPrice() { return price; }
     public void setPrice(int price) { this.price = price; }
     public String getModel() { return model; }
     public void setModel(String model) { this.model = model; }
