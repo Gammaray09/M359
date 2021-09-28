@@ -24,6 +24,7 @@ public class ChevyDriverStudent {
         System.out.println(traxBase);
         System.out.println(traxLux);
         System.out.println(corvetteClassic);
+        System.out.println(corvetteSport);
 
         // Display price comparison
         System.out.println("\n*** COMPARE BY PRICE ***");

@@ -12,12 +12,12 @@ public class Chevy {
     private boolean sportsStatus;
 
     //constants
-    final String VEHICLE_MAKE = "Chevrolet";
-    final double TAX_RATE = 0.122;
-    final double LUX_PRICE = 0.2;
-    final int FOUR_WD = 3500;
-    final double SPORTS_PRICE = 0.15;
-    final double FUEL_EFFICIENCY_DEDUCT = 0.2;
+    public final String VEHICLE_MAKE = "Chevrolet";
+    public final double TAX_RATE = 0.122;
+    public final double LUX_PRICE = 0.2;
+    public final int FOUR_WD = 3500;
+    public final double SPORTS_PRICE = 0.15;
+    public final double FUEL_EFFICIENCY_DEDUCT = 0.2;
 
     //Constructors
     public Chevy() {
@@ -73,14 +73,14 @@ public class Chevy {
     public double calcPrice(){
         double total = this.price;
         if(luxStatus == true){
-            total = (this.price * LUX_PRICE) + this.price;
+            total += (this.price * LUX_PRICE);
         }
         if(a4WDStatus == true){
             total += FOUR_WD;
         }
         if(sportsStatus == true){
-            total = (this.price * SPORTS_PRICE) + this.price;
-            this.fuelEfficiency = this.fuelEfficiency * FUEL_EFFICIENCY_DEDUCT - this.fuelEfficiency;
+            total += (this.price * SPORTS_PRICE);
+            this.fuelEfficiency -= this.fuelEfficiency * FUEL_EFFICIENCY_DEDUCT ;
         }
         total = (total * TAX_RATE) + total;
         return total;
@@ -98,13 +98,13 @@ public class Chevy {
             packages += "\n\t\t\t-4WD Package";
         }
         if (sportsStatus == true){
-            packages += "\t\t\t-Sports Package";
+            packages += "\n\t\t\t-Sports Package";
         }
         if(luxStatus == false && a4WDStatus == false && sportsStatus == false) {
             packages = "\t\t\t-None";
         }
 
-        String output = year + " " + VEHICLE_MAKE + " " + model + " (" + color + ")\n\t PRICE: \t\t\t" + aPrice + "\n\t MILES:\t\t\t\t" +
+        String output = year + " " + VEHICLE_MAKE + " " + model + "(" + color + ")\n\t PRICE: \t\t\t$" + aPrice + "\n\t MILES:\t\t\t\t" +
                 mileage + "\n\t FUEL EFFICIENCY:\t" + fuelEfficiency + "mpg" +"\n\t PACKAGES:\n" + packages;
         return output;
     }
