@@ -81,22 +81,21 @@ public class Chevy {
     public double calcPrice(){
         double total = this.price;
         if(luxStatus == true){
-            total += (this.price * LUX_PRICE);
+            this.price += (total * LUX_PRICE);
         }
         if(a4WDStatus == true){
-            total += FOUR_WD;
+            this.price += FOUR_WD;
         }
         if(sportsStatus == true){
-            total += (this.price * SPORTS_PRICE);
+            this.price += (total * SPORTS_PRICE);
             this.fuelEfficiency -= this.fuelEfficiency * FUEL_EFFICIENCY_DEDUCT ;
         }
-        total = (total * TAX_RATE) + total;
-        return total;
+        this.price += (this.price * TAX_RATE) ;
+        return this.price;
     }
 
 
     public String toString(){
-        double aPrice = this.calcPrice();
 
         String packages = "";
         if(luxStatus == true){
@@ -112,7 +111,7 @@ public class Chevy {
             packages = "\t\t\t-None";
         }
 
-        String output = year + " " + VEHICLE_MAKE + " " + model + "(" + color + ")\n\t PRICE: \t\t\t$" + aPrice + "\n\t MILES:\t\t\t\t" +
+        String output = year + " " + VEHICLE_MAKE + " " + model + "(" + color + ")\n\t PRICE: \t\t\t$" + this.calcPrice() + "\n\t MILES:\t\t\t\t" +
                 mileage + "\n\t FUEL EFFICIENCY:\t" + fuelEfficiency + "mpg" +"\n\t PACKAGES:\n" + packages;
         return output;
     }
