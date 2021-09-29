@@ -46,7 +46,15 @@ public class Chevy {
     }
 
     //methods
-    public double compareTo(Chevy other){ return this.price - other.price;}
+    public int compareTo(Chevy other){
+        if(this.price - other.price > 0){
+            return 1;
+        } else if (this.price - other.price < 0){
+            return -1;
+        } else{
+            return 0;
+        }
+    }
 
     public boolean equal(Chevy other){
         String vehicle1 = "";
