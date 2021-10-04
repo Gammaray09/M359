@@ -99,7 +99,7 @@ public class Chevy {
 
         String packages = "";
         if(luxStatus == true){
-            packages += "\t\t\t-Luxary Package";
+            packages += "\t\t\t-Luxary Package"; //spelling error
         }
         if(a4WDStatus == true){
             packages += "\n\t\t\t-4WD Package";
