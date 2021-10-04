@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="f6cded55-f257-4619-aec7-582a41f9c545" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/Unit4_loops/examples/AverageScore.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Unit4_loops/examples/GuessNumber.java" afterDir="false" />
@@ -8,6 +9,9 @@
       <change beforePath="$PROJECT_DIR$/Unit3_Booleans_IfStatements/Homework/ChevroletLab/Chevy.java" beforeDir="false" afterPath="$PROJECT_DIR$/Unit3_Booleans_IfStatements/Homework/ChevroletLab/Chevy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/M359/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/M359/.idea/workspace.xml" afterDir="false" />
     </list>
+=======
+    <list default="true" id="f6cded55-f257-4619-aec7-582a41f9c545" name="Default Changelist" comment="" />
+>>>>>>> bca28197146de95887a80f500143a5604a23580c
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -144,11 +148,11 @@
     <servers />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/M359$StudentTester.ic" NAME="StudentTester Coverage Results" MODIFIED="1632445124706" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>Unit3_Booleans_IfStatements.examples.Student.*</FILTER>
-    </SUITE>
     <SUITE FILE_PATH="coverage/M359$ChevyDriverStudent.ic" NAME="ChevyDriverStudent Coverage Results" MODIFIED="1632445960802" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>Unit3_Booleans_IfStatements.Homework.ChevroletLab.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/M359$StudentTester.ic" NAME="StudentTester Coverage Results" MODIFIED="1632445124706" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>Unit3_Booleans_IfStatements.examples.Student.*</FILTER>
     </SUITE>
   </component>
 </project>
