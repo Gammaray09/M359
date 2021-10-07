@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f6cded55-f257-4619-aec7-582a41f9c545" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Unit4_loops/examples/For_loops.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/Unit4_loops/examples/StringAlgorithms.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/M359/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/M359/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +42,7 @@
       <recent name="Unit3_Booleans_IfStatements.Homework.ChevroletLab" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.For_loops">
+  <component name="RunManager" selected="Application.StringAlgorithms">
     <configuration name="AverageScore" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Unit4_loops.examples.AverageScore" />
       <module name="M359" />
@@ -99,14 +97,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StudentTester" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="openjdk-16" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <option name="MAIN_CLASS_NAME" value="Unit3_Booleans_IfStatements.examples.Student.StudentTester" />
+    <configuration name="StringAlgorithms" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Unit4_loops.examples.StringAlgorithms" />
       <module name="M359" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Unit3_Booleans_IfStatements.examples.Student.*" />
+          <option name="PATTERN" value="Unit4_loops.examples.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -115,19 +111,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.StudentTester" />
       <item itemvalue="Application.ChevyDriverStudent" />
       <item itemvalue="Application.AverageScore" />
       <item itemvalue="Application.GuessNumber" />
       <item itemvalue="Application.For_loops" />
+      <item itemvalue="Application.StringAlgorithms" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.StringAlgorithms" />
         <item itemvalue="Application.For_loops" />
         <item itemvalue="Application.GuessNumber" />
         <item itemvalue="Application.AverageScore" />
         <item itemvalue="Application.ChevyDriverStudent" />
-        <item itemvalue="Application.StudentTester" />
       </list>
     </recent_temporary>
   </component>
