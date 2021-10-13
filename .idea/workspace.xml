@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f6cded55-f257-4619-aec7-582a41f9c545" name="Default Changelist" comment="" />
+    <list default="true" id="f6cded55-f257-4619-aec7-582a41f9c545" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Unit4_loops/examples/challengeProblems.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unit4_loops/examples/tester.java" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,20 +43,7 @@
       <recent name="Unit3_Booleans_IfStatements.Homework.ChevroletLab" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.tester">
-    <configuration name="AverageScore" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Unit4_loops.examples.AverageScore" />
-      <module name="M359" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Unit4_loops.examples.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.challengeProblems">
     <configuration name="For_loops" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Unit4_loops.examples.For_loops" />
       <module name="M359" />
@@ -92,6 +83,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="challengeProblems" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Unit4_loops.examples.challengeProblems" />
+      <module name="M359" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Unit4_loops.examples.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="tester" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Unit4_loops.examples.tester" />
       <module name="M359" />
@@ -106,19 +110,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.AverageScore" />
       <item itemvalue="Application.GuessNumber" />
       <item itemvalue="Application.For_loops" />
       <item itemvalue="Application.StringAlgorithms" />
       <item itemvalue="Application.tester" />
+      <item itemvalue="Application.challengeProblems" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.challengeProblems" />
         <item itemvalue="Application.tester" />
         <item itemvalue="Application.StringAlgorithms" />
         <item itemvalue="Application.For_loops" />
         <item itemvalue="Application.GuessNumber" />
-        <item itemvalue="Application.AverageScore" />
       </list>
     </recent_temporary>
   </component>
@@ -134,11 +138,11 @@
     <servers />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/M359$ChevyDriverStudent.ic" NAME="ChevyDriverStudent Coverage Results" MODIFIED="1632445960802" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>Unit3_Booleans_IfStatements.Homework.ChevroletLab.*</FILTER>
-    </SUITE>
     <SUITE FILE_PATH="coverage/M359$StudentTester.ic" NAME="StudentTester Coverage Results" MODIFIED="1632445124706" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>Unit3_Booleans_IfStatements.examples.Student.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/M359$ChevyDriverStudent.ic" NAME="ChevyDriverStudent Coverage Results" MODIFIED="1632445960802" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>Unit3_Booleans_IfStatements.Homework.ChevroletLab.*</FILTER>
     </SUITE>
   </component>
 </project>
