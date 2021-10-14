@@ -39,7 +39,7 @@
       <recent name="Unit3_Booleans_IfStatements.Homework.ChevroletLab" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.challengeProblems">
+  <component name="RunManager" selected="Application.tester">
     <configuration name="For_loops" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Unit4_loops.examples.For_loops" />
       <module name="M359" />
@@ -114,8 +114,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.challengeProblems" />
         <item itemvalue="Application.tester" />
+        <item itemvalue="Application.challengeProblems" />
         <item itemvalue="Application.StringAlgorithms" />
         <item itemvalue="Application.For_loops" />
         <item itemvalue="Application.GuessNumber" />
