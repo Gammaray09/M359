@@ -39,7 +39,7 @@
       <recent name="Unit3_Booleans_IfStatements.Homework.ChevroletLab" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.AverageScore">
+  <component name="RunManager" selected="Application.challengeProblems">
     <configuration name="AverageScore" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Unit4_loops.examples.AverageScore" />
       <module name="M359" />
@@ -114,9 +114,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.challengeProblems" />
         <item itemvalue="Application.AverageScore" />
         <item itemvalue="Application.tester" />
-        <item itemvalue="Application.challengeProblems" />
         <item itemvalue="Application.StringAlgorithms" />
         <item itemvalue="Application.For_loops" />
       </list>
