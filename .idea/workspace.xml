@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
- HEAD
     <list default="true" id="f6cded55-f257-4619-aec7-582a41f9c545" name="Default Changelist" comment="" />
-=======
-    <list default="true" id="f6cded55-f257-4619-aec7-582a41f9c545" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Unit4_loops/examples/PigLatinLab/PigLatin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
->>>>>>> 2386e98d37fbbb9d08c0b88817ce8e736dafb19e
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -46,9 +39,9 @@
       <recent name="Unit3_Booleans_IfStatements.Homework.ChevroletLab" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.tester">
-    <configuration name="For_loops" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Unit4_loops.examples.For_loops" />
+  <component name="RunManager" selected="Application.AverageScore">
+    <configuration name="AverageScore" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Unit4_loops.examples.AverageScore" />
       <module name="M359" />
       <extension name="coverage">
         <pattern>
@@ -60,8 +53,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GuessNumber" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Unit4_loops.examples.GuessNumber" />
+    <configuration name="For_loops" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Unit4_loops.examples.For_loops" />
       <module name="M359" />
       <extension name="coverage">
         <pattern>
@@ -113,19 +106,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.GuessNumber" />
       <item itemvalue="Application.For_loops" />
       <item itemvalue="Application.StringAlgorithms" />
       <item itemvalue="Application.tester" />
       <item itemvalue="Application.challengeProblems" />
+      <item itemvalue="Application.AverageScore" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.AverageScore" />
         <item itemvalue="Application.tester" />
         <item itemvalue="Application.challengeProblems" />
         <item itemvalue="Application.StringAlgorithms" />
         <item itemvalue="Application.For_loops" />
-        <item itemvalue="Application.GuessNumber" />
       </list>
     </recent_temporary>
   </component>
