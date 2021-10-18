@@ -6,15 +6,20 @@ public class PigLatin {
 
     public static String toPigLatin(String phrase){
         int index = 0;
-        String tempPhrase = phrase;
+        String tempPhrase = phrase.toLowerCase();
         String translatedPhrase = "";
         String aWord = "";
-        while(index != -1){
-            index = tempPhrase.indexOf(" ");
-            aWord = tempPhrase.substring(0,index);
+        while(tempPhrase.indexOf(" ") != -1) {
+            aWord = tempPhrase.substring(0, index);
             tempPhrase = tempPhrase.substring(index);
-            translatedPhrase += aWord + " ";
+            if(aWord.length() != 0) {
+                translatedPhrase += translateWordToPigLatin(aWord) + " ";
+            } else {
+                break;
+            }
+
         }
+        System.out.println(tempPhrase);
         return translatedPhrase;
     }
 
