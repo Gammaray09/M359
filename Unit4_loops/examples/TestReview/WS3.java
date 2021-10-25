@@ -78,7 +78,7 @@ public class WS3 {
             the words.  See the sample output on the worksheet
         */
 
-        //System.out.println(buildPhrase());
+        System.out.println(buildPhrase());
 
        /* 8 Use nested loops to generate this output:
 
@@ -89,13 +89,19 @@ public class WS3 {
 		5 10 15 20 25
 
 		*/
+        for (int i = 1; i <= 5 ; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print(i * j + "\t");
+            }
+            System.out.println();
+        }
 
 
 		/*  #9. Write a void method called findFactors that accepts an int and
 		    will print all factors of the given parameter.
 		*/
-        //findFactors(40);		 // prints: 40  20  10  8  5  4  2  1
-        //findFactors(17);		 // prints: 17  1
+        findFactors(40);		 // prints: 40  20  10  8  5  4  2  1
+        findFactors(17);		 // prints: 17  1
 
     }
 
@@ -159,19 +165,31 @@ public class WS3 {
 
 
     // #7
-    //public static String buildPhrase() {
-        //String str = "";
-        //Scanner input = new Scanner(System.in);
-        //System.out.println("Enter the first word of your phrase (-1 to quit):");
-        //String word = input.nextLine();
+    public static String buildPhrase() {
+        String str = "";
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter the first word of your phrase (-1 to quit):");
+        String word = input.nextLine();
 
         // loop
-        //While(!word.equals("-1")){
+        while(!word.equals("-1")){
+            str+= "";
+            System.out.println("Enter the next word of your phrase (-1 to quit):");
+            word = input.nextLine();
+        }
+        return str;
+    }
+
+
+
+    // #9
+    public static void findFactors(int n){
+        for (int i = n; i > 0; i--) {
+            if(n % i == 0){
+                System.out.println(i + " ");
+            }
 
         }
-        // complete any other method code
-
-
-    //}
-//}
+    }
+}
 
