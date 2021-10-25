@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f6cded55-f257-4619-aec7-582a41f9c545" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Unit4_loops/examples/TestReview/WS3.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Unit4_loops/examples/TestReview/WS3_Tester.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Unit5_WritingClasses/examples/HeroVillainExamples/MarvelMovieTester.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Unit5_WritingClasses/examples/HeroVillainExamples/Power.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Unit5_WritingClasses/examples/HeroVillainExamples/SuperHero.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Unit5_WritingClasses/examples/HeroVillainExamples/Villain.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -41,7 +43,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.tabs" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="ReaderModeSettings">
     <option name="enabled" value="false" />
@@ -51,13 +53,13 @@
       <recent name="Unit3_Booleans_IfStatements.Homework.ChevroletLab" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.WS3">
-    <configuration name="AverageScore" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Unit4_loops.examples.AverageScore" />
+  <component name="RunManager" selected="Application.MarvelMovieTester">
+    <configuration name="MarvelMovieTester" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Unit5_WritingClasses.examples.HeroVillainExamples.MarvelMovieTester" />
       <module name="M359" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Unit4_loops.examples.TestReview.*" />
+          <option name="PATTERN" value="Unit5_WritingClasses.examples.HeroVillainExamples.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -120,17 +122,17 @@
     <list>
       <item itemvalue="Application.tester" />
       <item itemvalue="Application.challengeProblems" />
-      <item itemvalue="Application.AverageScore" />
       <item itemvalue="Application.PigLatinTester" />
       <item itemvalue="Application.WS3" />
+      <item itemvalue="Application.MarvelMovieTester" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MarvelMovieTester" />
         <item itemvalue="Application.WS3" />
         <item itemvalue="Application.tester" />
         <item itemvalue="Application.PigLatinTester" />
         <item itemvalue="Application.challengeProblems" />
-        <item itemvalue="Application.AverageScore" />
       </list>
     </recent_temporary>
   </component>
