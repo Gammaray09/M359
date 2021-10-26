@@ -6,7 +6,7 @@ public class Villain {
 
     public Villain(String name, Power superPower) {
         this.name = name;
-        this.superPower = superPower;
+        this.superPower = new Power(superPower.getPower(), superPower.getStrength());
     }
 
     public String getVillain() { return name; }
@@ -14,5 +14,5 @@ public class Villain {
     public Power getSuperPower() { return superPower; }
     public void setSuperPower(Power superPower) { this.superPower = superPower; }
 
-    public String toString() { return "villain:" + name + "\n" + superPower.toString();}
+    public String toString() { return "Villain:" + name + "\n" + superPower.toString();}
 }

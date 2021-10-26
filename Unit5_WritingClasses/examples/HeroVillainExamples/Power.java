@@ -12,7 +12,7 @@ public class Power {
     public String getPower() { return power; }
     public void setPower(String power) { this.power = power; }
     public int getStrength() { return strength; }
-    public void setStrength(int strength) { strength = strength; }
+    public void setStrength(int strength) { this.strength = strength; }
 
-    public String toString() { return "power:" + power + "\n" + "Strength:" + strength ; }
+    public String toString() { return "Power:" + power + "\n" + "Strength:" + strength ; }
 }

@@ -5,11 +5,13 @@ public class MarvelMovieTester {
         Power lighting = new Power("lighting", 8);
         Power strength = new Power("Super Strength", 10);
 
-        SuperHero Thor = new SuperHero("thor", lighting);
+        SuperHero Thor = new SuperHero("Thor", lighting);
         SuperHero Captain_America = new SuperHero("Captain America", strength);
         Villain Thanos = new Villain("Thanos", strength);
 
-        System.out.println(Thor.toString());
-        System.out.println(Captain_America.toString());
+        Thanos.getSuperPower().setStrength(15);
+
+        System.out.println(Thanos);
+        System.out.println(Captain_America);
     }
 }

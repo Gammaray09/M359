@@ -6,13 +6,13 @@ public class SuperHero {
 
     public SuperHero(String name, Power superPower) {
         this.name = name;
-        this.superPower = superPower;
+        this.superPower = new Power(superPower.getPower(), superPower.getStrength());
     }
 
-    public String getHero() { return name; }
-    public void setHero(String name) {this.name = name; }
+    public String getName() { return name; }
+    public void setName(String name) {this.name = name; }
     public Power getSuperPower() { return superPower; }
     public void setSuperPower(Power superPower) { this.superPower = superPower; }
 
-    public String toString() { return "hero:" + name + "\n" + superPower.toString(); }
+    public String toString() { return "Hero:" + name + "\n" + superPower.toString(); }
 }
