@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f6cded55-f257-4619-aec7-582a41f9c545" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Unit5_WritingClasses/examples/HeroVillainExamples/MarvelMovieTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/Unit5_WritingClasses/examples/HeroVillainExamples/MarvelMovieTester.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Unit5_WritingClasses/examples/HeroVillainExamples/Power.java" beforeDir="false" afterPath="$PROJECT_DIR$/Unit5_WritingClasses/examples/HeroVillainExamples/Power.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Unit5_WritingClasses/examples/HeroVillainExamples/SuperHero.java" beforeDir="false" afterPath="$PROJECT_DIR$/Unit5_WritingClasses/examples/HeroVillainExamples/SuperHero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Unit5_WritingClasses/examples/HeroVillainExamples/Villain.java" beforeDir="false" afterPath="$PROJECT_DIR$/Unit5_WritingClasses/examples/HeroVillainExamples/Villain.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
