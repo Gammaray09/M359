@@ -9,8 +9,7 @@ public class MarvelMovieTester {
         Villain Thanos = new Villain("Thanos", strength);
 
 
-        System.out.println(Thanos);
-        System.out.println(Thor);
+        battle(Thor, Thanos);
 
 
     }
@@ -27,8 +26,8 @@ public class MarvelMovieTester {
      */
     public static void battle (SuperHero hero, Villain villain){
         double heroStrength = hero.getSuperPower().getStrength();
-        double villainStrength = hero.getSuperPower().getStrength();
-        double random = (int)(Math.random() * 31 + 5);
+        double villainStrength = villain.getSuperPower().getStrength();
+        int random = (int)(Math.random() * 31 + 5);
         String winner = "";
         // hero wins
         if(heroStrength > villainStrength){
@@ -37,10 +36,10 @@ public class MarvelMovieTester {
             villainStrength =(villainStrength - random * 0.01) + villainStrength;
             winner = "The winner is" + hero.getName();
         // villain wins
-        } else if(heroStrength > villainStrength){
+        } else if(villainStrength > heroStrength){
             villainStrength =(heroStrength * 0.10) + villainStrength;
             heroStrength =(heroStrength - random * 0.01) + heroStrength;
-            winner = "The winner is";
+            winner = "The winner is " + villain.getVillain();
         // both tie
         } else {
             villainStrength =(villainStrength * random) + villainStrength;
@@ -51,6 +50,8 @@ public class MarvelMovieTester {
         hero.getSuperPower().setStrength(heroStrength);
         villain.getSuperPower().setStrength(villainStrength);
         System.out.println(winner);
+        System.out.println(hero);
+        System.out.println(villain);
 
     }
 }
