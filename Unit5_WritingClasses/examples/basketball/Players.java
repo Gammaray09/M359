@@ -1,38 +1,70 @@
 package Unit5_WritingClasses.examples.basketball;
 
 public class Players {
+    // instance variables of name(String), height(String), weight(int), skill profile from Skills class
     private String name;
-    private int height;
+    private String height;
     private int weight;
+    private Skills skillProfile;
+    private int totalSkills;
 
-    public Players(String name, int height, int weight) {
+    /**
+     * Constructor takes in all instance variables
+     * Grabs instance variable from Skill object and sets it to skillProfile
+     * Adds all the instance variable from Skills object to totalSkills
+     * @param name
+     * @param height
+     * @param weight
+     * @param skillProfile
+     */
+    public Players(String name, String height, int weight, Skills skillProfile) {
         this.name = name;
         this.height = height;
         this.weight = weight;
+        // Grabs all instance variable from Skills object
+        this.skillProfile = new Skills(skillProfile.getShooting(), skillProfile.getDribbling()
+                , skillProfile.getRebounding(), skillProfile.getStealing(), skillProfile.getBlocking());
+
+        this.totalSkills = skillProfile.getShooting() + skillProfile.getDribbling() + skillProfile.getRebounding()
+                + skillProfile.getStealing() + skillProfile.getBlocking();
+
+    }
+    //get and set methods
+    public String getName() { return name; }
+
+    public void setName(String name) { this.name = name; }
+
+    public String getHeight() { return height; }
+
+    public void setHeight(String height) { this.height = height; }
+
+    public int getWeight() { return weight; }
+
+    public void setWeight(int weight) { this.weight = weight; }
+
+    public Skills getSkillProfile() {
+        return skillProfile;
     }
 
-    public String getName() {
-        return name;
+    public void setSkillProfile(Skills skillProfile) {
+        this.skillProfile = skillProfile;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public int getTotalSkills() {return totalSkills;}
+
+    public void setTotalSkills(int totalSkills) {this.totalSkills = totalSkills;}
+
+    /**
+     * This method returns all the stats of the object in proper format
+     * It also adds the toString() method from the Skills class
+     * @return
+     */
+    public String toString() {
+        return "\nName: " + name + "\n" +
+                "Height: " + height + "\n" +
+                "Weight: " + weight + "\n" +
+                skillProfile;
     }
 
-    public int getHeight() {
-        return height;
-    }
-
-    public void setHeight(int height) {
-        this.height = height;
-    }
-
-    public int getWeight() {
-        return weight;
-    }
-
-    public void setWeight(int weight) {
-        this.weight = weight;
-    }
 
 }
