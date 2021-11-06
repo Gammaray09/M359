@@ -2,6 +2,10 @@ package Unit5_WritingClasses.examples.basketball;
 
 public class Basketball_Tester {
     public static void main(String[] args) {
+
+        MyFrame GUI = new MyFrame();
+
+
         Skills skillProfile1 = new Skills(3,4,5,6,0);
         Skills skillProfile2 = new Skills(4,3,7,5,4);
         Skills skillProfile3 = new Skills(5,1,7,3,8);
