@@ -6,10 +6,12 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 
-public class Basketball_Tester implements ActionListener {
+public class Basketball_Tester {
     public static void main(String[] args) {
 
         MyFrame GUI = new MyFrame();
+        ImageIcon icon = new ImageIcon("logo.png");
+        GUI.setIconImage(icon.getImage());
 
 
         Skills skillProfile1 = new Skills(3,4,5,6,0);
@@ -97,9 +99,6 @@ public class Basketball_Tester implements ActionListener {
         System.out.println(winner);
     }
 
-    @Override
-    public void actionPerformed(ActionEvent e) {
 
-    }
 }
 
