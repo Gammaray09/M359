@@ -30,36 +30,14 @@ public class Basketball_Tester {
         Players p8 = new Players("Zach Lavine", "7'0", 270, skillProfile4);
 
 
-        Teams team1 = new Teams("Lakers", p1 ,p2 ,p3 ,p4);
-        Teams team2 = new Teams("Bulls", p5,p6,p7, p8);
 
 
 
         //createObjects();
         //System.out.println(team1);
-        training(p6);
-        match(team1, team2);
 
     }
 
-    public static void createObjects(){
-        Skills skillProfile1 = new Skills(3,4,5,6,0);
-        Skills skillProfile2 = new Skills(4,3,7,5,4);
-        Skills skillProfile3 = new Skills(5,1,7,3,8);
-        Skills skillProfile4 = new Skills(1,4,5,6,2);
-
-        Players p1 = new Players("Stephen Curry", "6'3", 190, skillProfile1);
-        Players p2 = new Players("Lebron James", "6'9", 250, skillProfile2);
-        Players p3 = new Players("Kyrie Irving", "6'1", 200, skillProfile3);
-        Players p4 = new Players("Joel Embiid", "7'0", 270, skillProfile4);
-        Players p5 = new Players("Russell Westbrook", "7'0", 270, skillProfile1);
-        Players p6 = new Players("Trae Young", "7'0", 270, skillProfile2);
-        Players p7 = new Players("James Harden", "7'0", 270, skillProfile3);
-        Players p8 = new Players("Zach Lavine", "7'0", 270, skillProfile4);
-
-        Teams team1 = new Teams("Lakers", p1 ,p2 ,p3 ,p4);
-        Teams team2 = new Teams("Bulls", p5,p6,p7, p8);
-    }
 
     /**
      *

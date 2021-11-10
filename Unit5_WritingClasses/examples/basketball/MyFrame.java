@@ -7,13 +7,22 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class MyFrame extends JFrame  implements ActionListener {
-    Skills skillProfile1 = new Skills(3,4,5,6,0);
-    Skills skillProfile2 = new Skills(4,3,7,5,4);
+    Skills skillProfile1 = new Skills(8,8,8,8,8);
+    Skills skillProfile2 = new Skills(0,0,0,0,0);
     Skills skillProfile3 = new Skills(5,1,7,3,8);
     Skills skillProfile4 = new Skills(1,4,5,6,2);
     Skills finalSkillProfile = skillProfile1;
 
-    Players p9;
+    Players p1;
+    Players p2;
+    Players p3;
+    Players p4;
+
+    Teams team1;
+    Teams team2;
+
+    public static int numPlayers = 0;
+    int curSkill = 0;
 
     JTextField nameInput;
     JTextField HeightInput;
@@ -26,56 +35,49 @@ public class MyFrame extends JFrame  implements ActionListener {
 
     JButton submitButton;
     JButton matchButton;
-
+    JButton trainButton;
 
     MyFrame(){
-
         this.setTitle("Basketball Tester");
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setLayout(null);
         this.setSize(450,260);
         this.setResizable(true);
-        this.getContentPane().setBackground(Color.lightGray);
-
-
+        this.getContentPane().setBackground(new Color(0x3679ad));
 
         JPanel panel0 = new JPanel();
-        panel0.setBackground(Color.lightGray);
+        panel0.setBackground(new Color(0x3679ad));
         panel0.setBounds(0,0,450,35);
 
         JPanel panel1 = new JPanel();
-        panel1.setBackground(Color.lightGray);
+        panel1.setBackground(new Color(0x3679ad));
         panel1.setBounds(0,35,450,25);
 
         JPanel panel2 = new JPanel();
-        panel2.setBackground(Color.lightGray);
+        panel2.setBackground(new Color(0x3679ad));
         panel2.setBounds(0,60,450,25);
 
         JPanel panel3 = new JPanel();
-        panel3.setBackground(Color.lightGray);
+        panel3.setBackground(new Color(0x3679ad));
         panel3.setBounds(0,85,450,50);
 
         JPanel panel4 = new JPanel();
-        panel4.setBackground(Color.lightGray);
+        panel4.setBackground(new Color(0x3679ad));
         panel4.setBounds(0,120,450,50);
 
-
-
-        JLabel title = new JLabel("Create Player 9");
+        JLabel title = new JLabel("Player Creation");
         title.setFont(new Font("Rockwell", Font.BOLD, 25));
 
         JLabel playerTitle = new JLabel("Player Name");
         playerTitle.setFont(new Font("Rockwell", Font.PLAIN, 15));
         playerTitle.setHorizontalAlignment(JLabel.LEFT);
 
-        JLabel heightTitle = new JLabel("Height    ");
+        JLabel heightTitle = new JLabel("Height:   ");
         heightTitle.setFont(new Font("Rockwell", Font.PLAIN, 15));
 
-        JLabel weightTitle = new JLabel("Weight    ");
+        JLabel weightTitle = new JLabel("Weight:   ");
         weightTitle.setFont(new Font("Rockwell", Font.PLAIN, 15));
         weightTitle.setBounds(0,95,200,25);
-
-
 
         nameInput = new JTextField();
         nameInput.setPreferredSize(new Dimension(250,20));
@@ -107,6 +109,10 @@ public class MyFrame extends JFrame  implements ActionListener {
         matchButton.addActionListener(this);
         matchButton.setText("Match");
 
+        trainButton = new JButton();
+        trainButton.setBounds(180,175,75,35);
+        trainButton.addActionListener(this);
+        trainButton.setText("Train");
 
         skillProfile1Button = new JRadioButton("skillProfile1");
         skillProfile2Button = new JRadioButton("skillProfile2");
@@ -119,12 +125,16 @@ public class MyFrame extends JFrame  implements ActionListener {
         group.add(skillProfile3Button);
         group.add(skillProfile4Button);
 
+        skillProfile1Button.addActionListener(this);
+        skillProfile2Button.addActionListener(this);
+        skillProfile3Button.addActionListener(this);
+        skillProfile4Button.addActionListener(this);
+
         this.add(panel4);
         panel4.add(skillProfile1Button);
         panel4.add(skillProfile2Button);
         panel4.add(skillProfile3Button);
         panel4.add(skillProfile4Button);
-
 
         this.add(panel0);
         panel0.add(title);
@@ -143,23 +153,34 @@ public class MyFrame extends JFrame  implements ActionListener {
 
         this.add(submitButton);
         this.add(matchButton);
+        this.add(trainButton);
+
+
 
         this.setVisible(true);
-
 
     }
     @Override
     public void actionPerformed(ActionEvent e) {
 
-        // if/else statement for skill profile
+
+
+        if(e.getSource() == trainButton){
+            Basketball_Tester.training(p1);
+        }
+
+        // if/else statement for setting current skill profile
         if(e.getSource() == skillProfile1Button){
-            finalSkillProfile = skillProfile1;
-        } else if(e.getSource() == skillProfile2Button){
-            finalSkillProfile = skillProfile2;
-        }else if(e.getSource() == skillProfile3Button){
-            finalSkillProfile = skillProfile3;
-        }else{
-            finalSkillProfile = skillProfile4;
+            curSkill = 1;
+        }
+        if(e.getSource() == skillProfile2Button){
+            curSkill = 2;
+        }
+        if(e.getSource() == skillProfile3Button){
+            curSkill = 3;
+        }
+        if(e.getSource() == skillProfile4Button){
+            curSkill = 4;
         }
 
         // if/else statement creates new player if button pressed
@@ -170,20 +191,50 @@ public class MyFrame extends JFrame  implements ActionListener {
                 JOptionPane.showMessageDialog(null,"Please Enter Info", "Error",
                         JOptionPane.WARNING_MESSAGE);
             } else {
-                p9 = new Players(nameInput.getText(), HeightInput.getText(),
-                        Integer.parseInt(WeightInput.getText()), skillProfile1);
-                System.out.println(p9);
+                if(curSkill == 1){
+                    finalSkillProfile = skillProfile1;
+                } else if(curSkill == 2){
+                    finalSkillProfile = skillProfile2;
+                } else if(curSkill == 3){
+                    finalSkillProfile = skillProfile3;
+                } else{
+                    finalSkillProfile = skillProfile4;
+                }
+
+                if(numPlayers == 0){
+                    p1 = new Players(nameInput.getText(), HeightInput.getText(),
+                            Integer.parseInt(WeightInput.getText()), finalSkillProfile);
+                    numPlayers++;
+                    System.out.println(p1);
+                }else if(numPlayers == 1){
+                    p2 = new Players(nameInput.getText(), HeightInput.getText(),
+                            Integer.parseInt(WeightInput.getText()), finalSkillProfile);
+                    numPlayers++;
+                    System.out.println(p2);
+                }else if(numPlayers == 2){
+                    p3 = new Players(nameInput.getText(), HeightInput.getText(),
+                            Integer.parseInt(WeightInput.getText()), finalSkillProfile);
+                    numPlayers++;
+                    System.out.println(p3);
+                }else if(numPlayers == 3){
+                    p4 = new Players(nameInput.getText(), HeightInput.getText(),
+                            Integer.parseInt(WeightInput.getText()), finalSkillProfile);
+                    numPlayers++;
+                    System.out.println(p4);;
+                } else{
+                    JOptionPane.showMessageDialog(null,"Too Many Players Created", "Error",
+                            JOptionPane.WARNING_MESSAGE);
+                }
             }
         }
 
-
         if (e.getSource() == matchButton){
-            //Basketball_Tester.match();
+            team1 = new Teams("Lakers",p1, p2);
+            team2 = new Teams("Bulls",p3, p4);
+            Basketball_Tester.match(team1,team2);
         }
 
     }
-
-
 }
 
 

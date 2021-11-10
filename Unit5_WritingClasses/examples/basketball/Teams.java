@@ -15,16 +15,13 @@ public class Teams {
      * @param teamName
      * @param p1
      * @param p2
-     * @param p3
-     * @param p4
+
      */
-    public Teams(String teamName, Players p1, Players p2, Players p3, Players p4) {
+    public Teams(String teamName, Players p1, Players p2) {
         this.teamName = teamName;
         this.p1 = new Players(p1.getName(), p1.getHeight(), p1.getWeight(), p1.getSkillProfile());
         this.p2 = new Players(p2.getName(), p2.getHeight(), p2.getWeight(), p2.getSkillProfile());
-        this.p3 = new Players(p3.getName(), p3.getHeight(), p3.getWeight(), p3.getSkillProfile());
-        this.p4 = new Players(p4.getName(), p4.getHeight(), p4.getWeight(), p4.getSkillProfile());
-        totalTeamSkills = p1.getTotalSkills() + p2.getTotalSkills() + p3.getTotalSkills() + p4.getTotalSkills();
+        totalTeamSkills = p1.getTotalSkills() + p2.getTotalSkills() ;
     }
     //get and set methods
     public String getTeamName() { return teamName; }
