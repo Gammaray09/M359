@@ -1,5 +1,8 @@
 package Unit5_WritingClasses.examples.basketball;
 
+// Stephen Thomas and Aashman Sharma
+// Mr. Moon, 6th period
+
 public class Teams {
     // instances variable from team name(String) and 2 players from player class
     private String teamName;

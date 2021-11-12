@@ -1,5 +1,8 @@
 package Unit5_WritingClasses.examples.basketball;
 
+// Stephen Thomas and Aashman Sharma
+// Mr. Moon, 6th period
+
 public class Players {
     // instance variables of name(String), height(String), weight(int), skill profile from Skills class
     private String name;
@@ -23,7 +26,7 @@ public class Players {
         this.height = height;
         this.weight = weight;
         // Grabs all instance variable from Skills object
-        this.skillProfile = new Skills(skillProfile.getShooting(), skillProfile.getDribbling()
+        this.skillProfile = new Skills(skillProfile.getName(), skillProfile.getShooting(), skillProfile.getDribbling()
                 , skillProfile.getRebounding(), skillProfile.getStealing(), skillProfile.getBlocking());
 
         this.totalSkills = skillProfile.getShooting() + skillProfile.getDribbling() + skillProfile.getRebounding()

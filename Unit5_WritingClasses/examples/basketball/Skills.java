@@ -1,7 +1,11 @@
 package Unit5_WritingClasses.examples.basketball;
 
+// Stephen Thomas and Aashman Sharma
+// Mr. Moon, 6th period
+
 public class Skills {
     // instance variables for shooting, dribbling, rebounding, stealing, and blocking (All int)
+    private String name;
     private int shooting;
     private int dribbling;
     private int rebounding;
@@ -11,6 +15,7 @@ public class Skills {
 
     /**
      * Constructor takes in all instance variables
+     * @param name
      * @param shooting
      * @param dribbling
      * @param rebounding
@@ -18,7 +23,8 @@ public class Skills {
      * @param blocking
      */
 
-    public Skills(int shooting, int dribbling, int rebounding, int stealing, int blocking) {
+    public Skills(String name, int shooting, int dribbling, int rebounding, int stealing, int blocking) {
+        this.name = name;
         this.shooting = shooting;
         this.dribbling = dribbling;
         this.rebounding = rebounding;
@@ -27,6 +33,8 @@ public class Skills {
     }
 
     // get and set methods
+    public String getName() { return name; }
+    public void setName(String name) { this.name = name; }
     public int getShooting() { return shooting; }
     // Lines 36-33 is so that the stats don't go over 20
     // Lines 38-39 is if greater than 0 but less than 20 the stats can increase in training
@@ -100,11 +108,11 @@ public class Skills {
 
     // The toString method prints all the instance variables out in order
     public String toString() {
-        return "Stats: " + "\n\tShooting: " + shooting +
+        return name +":" + "\n\tShooting: " + shooting +
                 "\n\tDribbling : " + dribbling +
                 "\n\tRebounding: " + rebounding +
                 "\n\tStealing: " + stealing +
-                "\n\tBlocking: " + blocking;
+                "\n\tBlocking: " + blocking +"\n";
     }
 
 }

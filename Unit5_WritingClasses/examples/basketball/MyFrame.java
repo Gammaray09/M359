@@ -1,6 +1,9 @@
 package Unit5_WritingClasses.examples.basketball;
 
 
+// Stephen Thomas and Aashman Sharma
+// Mr. Moon, 6th period
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -8,10 +11,10 @@ import java.awt.event.ActionListener;
 
 public class MyFrame extends JFrame  implements ActionListener {
     // Creates skill objects for user to apply to players
-    Skills skillProfile1 = new Skills(8, 5, 1, 2, 4);
-    Skills skillProfile2 = new Skills(3, 9, 7, 6, 3);
-    Skills skillProfile3 = new Skills(5, 1, 7, 3, 8);
-    Skills skillProfile4 = new Skills(1, 4, 5, 6, 2);
+    Skills skillProfile1 = new Skills("skillProfile1", 8, 5, 1, 2, 4);
+    Skills skillProfile2 = new Skills("skillProfile2",3, 9, 7, 6, 3);
+    Skills skillProfile3 = new Skills("skillProfile3",5, 1, 7, 3, 8);
+    Skills skillProfile4 = new Skills("skillProfile4",1, 4, 5, 6, 2);
     Skills finalSkillProfile = skillProfile1;
 
     // creates empty player and team objects
@@ -48,7 +51,7 @@ public class MyFrame extends JFrame  implements ActionListener {
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setLayout(null);
         this.setSize(450, 260);
-        this.setResizable(false);
+        this.setResizable(true);
         this.getContentPane().setBackground(new Color(0x3679ad));
 
         // create panels to add into gui
@@ -164,6 +167,10 @@ public class MyFrame extends JFrame  implements ActionListener {
         this.add(matchButton);
         this.add(trainButton);
         this.setVisible(true);
+        System.out.println(skillProfile1);
+        System.out.println(skillProfile2);
+        System.out.println(skillProfile3);
+        System.out.println(skillProfile4);
 
     }
 
