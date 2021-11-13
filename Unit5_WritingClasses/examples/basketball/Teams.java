@@ -2,6 +2,7 @@ package Unit5_WritingClasses.examples.basketball;
 
 // Stephen Thomas and Aashman Sharma
 // Mr. Moon, 6th period
+// This class makes the Teams object
 
 public class Teams {
     // instances variable from team name(String) and 2 players from player class
@@ -13,9 +14,9 @@ public class Teams {
     /**
      * Constructor takes in all instance variables
      * Sets instance variable from player object to each player variable
-     * @param teamName
-     * @param p1
-     * @param p2
+     * @param teamName name of team
+     * @param p1 player object 1
+     * @param p2 player object 2
      */
     public Teams(String teamName, Players p1, Players p2) {
         this.teamName = teamName;

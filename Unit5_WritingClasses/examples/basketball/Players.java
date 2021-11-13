@@ -2,6 +2,7 @@ package Unit5_WritingClasses.examples.basketball;
 
 // Stephen Thomas and Aashman Sharma
 // Mr. Moon, 6th period
+// This class makes the player object
 
 public class Players {
     // instance variables of name(String), height(String), weight(int), skill profile from Skills class

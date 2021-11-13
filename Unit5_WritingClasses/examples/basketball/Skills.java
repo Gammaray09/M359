@@ -2,6 +2,7 @@ package Unit5_WritingClasses.examples.basketball;
 
 // Stephen Thomas and Aashman Sharma
 // Mr. Moon, 6th period
+// This class makes the skill object
 
 public class Skills {
     // instance variables for shooting, dribbling, rebounding, stealing, and blocking (All int)
@@ -103,7 +104,7 @@ public class Skills {
 
     /**
      * This method returns all the stats of the object in proper format
-     * @return
+     * @return returns string
      */
 
     // The toString method prints all the instance variables out in order

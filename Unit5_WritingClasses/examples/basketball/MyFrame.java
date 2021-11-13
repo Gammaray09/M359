@@ -3,6 +3,7 @@ package Unit5_WritingClasses.examples.basketball;
 
 // Stephen Thomas and Aashman Sharma
 // Mr. Moon, 6th period
+// This class makes the GUI and creates a user interaction
 
 import javax.swing.*;
 import java.awt.*;

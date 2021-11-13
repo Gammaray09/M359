@@ -2,6 +2,7 @@ package Unit5_WritingClasses.examples.basketball;
 
 // Stephen Thomas and Aashman Sharma
 // Mr. Moon, 6th period
+// This class makes the two static methods, Train and Match
 
 public class Basketball_Tester {
     public static void main(String[] args) {
@@ -14,7 +15,7 @@ public class Basketball_Tester {
      * This is the training method that has a 50% chance
      * to increase or decrease the players stats by a random range from 1-10
      * and then prints out the expected result based on the coin flip
-     * @param p1
+     * @param p1 player object that gets trained
      */
     public static String training(Players p1) {
         String result;
@@ -45,8 +46,8 @@ public class Basketball_Tester {
      * and thus print out the expected result
      *
      * This method uses the getTotalTeamSkills instance variable to get the total
-     * @param team1
-     * @param team2
+     * @param team1 team object 1
+     * @param team2 team object 2
      * @return
      */
     public static String match(Teams team1, Teams team2){
