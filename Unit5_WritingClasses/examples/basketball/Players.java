@@ -5,7 +5,7 @@ package Unit5_WritingClasses.examples.basketball;
 // This class makes the player object
 
 public class Players {
-    // instance variables of name(String), height(String), weight(int), skill profile from Skills class
+    // instance variables of name(String), height(String), weight(int), skill profile from Skills class, and total skills
     private String name;
     private String height;
     private int weight;
