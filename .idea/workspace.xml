@@ -50,7 +50,7 @@
       <recent name="C:\Users\aashm\OneDrive\Documents\GitHub\M359\Unit5_WritingClasses\examples\basketball" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Basketball_Tester">
+  <component name="RunManager" selected="Application.hwtest">
     <configuration name="Basketball_Tester" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Unit5_WritingClasses.examples.basketball.Basketball_Tester" />
       <module name="M359" />
@@ -103,12 +103,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="tester" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Unit4_loops.examples.tester" />
+    <configuration name="hwtest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Unit6_Arrays.Homework.hwtest" />
       <module name="M359" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Unit4_loops.examples.TestReview.*" />
+          <option name="PATTERN" value="Unit6_Arrays.Homework.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -117,19 +117,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.tester" />
       <item itemvalue="Application.WS3" />
       <item itemvalue="Application.MarvelMovieTester" />
       <item itemvalue="Application.Basketball_Tester" />
       <item itemvalue="Application.carTester" />
+      <item itemvalue="Application.hwtest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.hwtest" />
         <item itemvalue="Application.Basketball_Tester" />
         <item itemvalue="Application.carTester" />
         <item itemvalue="Application.MarvelMovieTester" />
         <item itemvalue="Application.WS3" />
-        <item itemvalue="Application.tester" />
       </list>
     </recent_temporary>
   </component>
