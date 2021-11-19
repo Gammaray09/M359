@@ -17,11 +17,11 @@ public class Course {
 
 
     // for a course without a teacher/grade (lunch, study hall, etc.)
-    public Course(String subject, int currentGrade) {
+    public Course(String subject, int period) {
         this.subject = subject;
         this.period = period;
-        teacherName = "None";
-        this.currentGrade = "None";
+        teacherName = "N/A";
+        this.currentGrade = "N/A";
     }
     //getters and setters
     public String getSubject() {return subject; }
@@ -36,7 +36,6 @@ public class Course {
 
     //Create a toString method that returns course data on one line
     public String toString() {
-        return "\tPeriod:" + this.period + ": "
-                + this.subject + "(" + this.teacherName + "), Grade:" + this.currentGrade;
+        return "\tPeriod:" + this.period + " " + this.subject + "(" + this.teacherName + ") Grade:" + this.currentGrade;
     }
 }
