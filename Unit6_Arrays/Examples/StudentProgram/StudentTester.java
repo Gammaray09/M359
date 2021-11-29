@@ -7,7 +7,7 @@ public class StudentTester {
         Course per3 = new Course("Ap Human Geo", "Robak", "A-", 3);
         Course per4 = new Course("Algebra 2/Pre-calc", "Ludois", "B", 4);
         Course per5 = new Course("Comp Sci A", "Moon", "A", 5);
-        Course per6 = new Course("Spanish 3", "Serna", "B-", 6);
+        Course per6 = new Course("Spanish 3", "Serna", "C+", 6);
         Course per7 = new Course("Lunch", 7);
         Course per8 = new Course("Reading", "Syed", "A", 8);
 
