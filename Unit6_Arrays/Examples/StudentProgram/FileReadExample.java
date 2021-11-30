@@ -1,4 +1,5 @@
 package Unit6_Arrays.Examples.StudentProgram;
+import java.awt.*;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
@@ -20,7 +21,6 @@ public class FileReadExample {
 
         String grade = fileIn.nextLine();
         System.out.println(grade);
-
 
     }
 }
