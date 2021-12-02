@@ -49,8 +49,11 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\aashm\OneDrive\Documents\GitHub\M359\Unit5_WritingClasses\examples\basketball" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\aashm\OneDrive\Documents\GitHub\M359" />
+    </key>
   </component>
-  <component name="RunManager" selected="Application.hwtest">
+  <component name="RunManager" selected="Application.TriviaDriver">
     <configuration name="Basketball_Tester" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Unit5_WritingClasses.examples.basketball.Basketball_Tester" />
       <module name="M359" />
@@ -64,12 +67,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MarvelMovieTester" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Unit5_WritingClasses.examples.HeroVillainExamples.MarvelMovieTester" />
+    <configuration name="FileReadExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Unit6_Arrays.Examples.StudentProgram.FileReadExample" />
       <module name="M359" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Unit5_WritingClasses.examples.HeroVillainExamples.*" />
+          <option name="PATTERN" value="Unit6_Arrays.Examples.StudentProgram.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -77,12 +80,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WS3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Unit4_loops.examples.TestReview.WS3" />
+    <configuration name="TriviaDriver" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Unit6_Arrays.Homework.Trivia.TriviaDriver" />
       <module name="M359" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Unit4_loops.examples.TestReview.*" />
+          <option name="PATTERN" value="Unit6_Arrays.Homework.Trivia.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -117,19 +120,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.WS3" />
-      <item itemvalue="Application.MarvelMovieTester" />
       <item itemvalue="Application.Basketball_Tester" />
       <item itemvalue="Application.carTester" />
       <item itemvalue="Application.hwtest" />
+      <item itemvalue="Application.FileReadExample" />
+      <item itemvalue="Application.TriviaDriver" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.TriviaDriver" />
+        <item itemvalue="Application.FileReadExample" />
         <item itemvalue="Application.hwtest" />
         <item itemvalue="Application.Basketball_Tester" />
         <item itemvalue="Application.carTester" />
-        <item itemvalue="Application.MarvelMovieTester" />
-        <item itemvalue="Application.WS3" />
       </list>
     </recent_temporary>
   </component>

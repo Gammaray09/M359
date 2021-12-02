@@ -1,0 +1,51 @@
+Which animal did not get sent to space?
+dog
+mouse
+spider
+bat*
+Which Apollo mission had to abort in space?
+Apollo 13*
+Apollo 11
+Apollo 14
+Apollo 12
+How many rovers are there on Mars?
+two
+three
+four
+five*
+What is the name of the space probe studied Saturn?
+Cassini*
+Voyager 1
+Galileo
+Juno
+How many satellites are in space currenty?
+350
+7500*
+200000
+840
+What is the only spacecraft to visit Uranus?
+Pioneer 11
+New Horizons
+Voyager 1
+Voyager 2*
+Who was the first person to go to space?
+Boris Yegorov
+Alexei Leonov
+Yuri Gagarin*
+Sergei Krikalev
+What space shuttle blew up on re-entry?
+Columbia*
+Discovery
+Atlantis
+Endeavour
+What is the most powerful rocket currently?
+Falcon 9
+Saturn V
+Soyuz
+Nasa SLS*
+What is the name of the Russian Space Station?
+Mir Space Station*
+International Space Station
+Skylab
+Tiangong
+
