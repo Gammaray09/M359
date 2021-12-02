@@ -1,20 +1,53 @@
 package Unit6_Arrays.Homework.Trivia;
 
-public class TriviaGame {
-    Question[] gameQuestion;
-    int score;
-    int answerStreak;
+import java.io.File;
+import java.util.Scanner;
+import java.io.FileNotFoundException;
 
-    public TriviaGame(Question[] gameQuestion, int score, int answerStreak) {
-        this.gameQuestion = new Question[12];
-        this.score = score;
-        this.answerStreak = answerStreak;
+
+public class TriviaGame {
+    private Question[] gameQuestion;
+    private int score;
+    private int answerStreak;
+
+    public TriviaGame(int score, int answerStreak) {
+        this.score = 0;
+        this.answerStreak = 0;
     }
 
-    public Question[] getGameQuestion() {return gameQuestion;}
-    public void setGameQuestion(Question[] gameQuestion) {this.gameQuestion = gameQuestion;}
-    public int getScore() {return score;}
-    public void setScore(int score) {this.score = score;}
-    public int getAnswerStreak() {return answerStreak;}
-    public void setAnswerStreak(int answerStreak) {this.answerStreak = answerStreak;}
+
+
+
+    public static void fileRead() throws FileNotFoundException{
+        File myFile = new File("spaceTrivia.txt");
+        Scanner fileIn = new Scanner(myFile);
+
+        while (fileIn.hasNextLine()){
+            String question = "";
+            int pointValue = 0;
+            String[] answerChoices = new String[4];
+            String correctAnswer = "";
+            Question[] questionsArr = new Question[12];
+
+            for (int i = 0; i < 12; i++) {
+                question = fileIn.nextLine();
+                pointValue = fileIn.nextInt();
+                fileIn.nextLine();
+                for (int j = 0; j < 4; j++) {
+                    String curAnswer = fileIn.nextLine();
+                    int length = curAnswer.length();
+                    if(curAnswer.substring(length-1, length).equals("*")){
+                        correctAnswer = curAnswer;
+                        curAnswer = curAnswer.substring(0, length-1);
+                    }
+                    answerChoices[j] = curAnswer;
+                }
+                questionsArr[i] = new Question(question, answerChoices, correctAnswer, pointValue);
+            }
+        }
+    }
+
+
+
+
 }

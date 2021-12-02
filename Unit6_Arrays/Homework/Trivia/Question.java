@@ -1,10 +1,10 @@
 package Unit6_Arrays.Homework.Trivia;
 
 public class Question {
-    String question;
-    String[] answerChoices;
-    String correctAnswer;
-    int pointValue;
+    private String question;
+    private String[] answerChoices;
+    private String correctAnswer;
+    private int pointValue;
 
     public Question(String question, String[] answerChoices, String correctAnswer, int pointValue) {
         this.question = question;
