@@ -1,5 +1,6 @@
 package Unit6_Arrays.Homework.Trivia;
 import java.io.FileNotFoundException;
+import java.util.Locale;
 import java.util.Scanner;
 
 
@@ -16,16 +17,25 @@ public class TriviaDriver {
 
 
     public static void main(String[] args) throws FileNotFoundException {
-        TriviaGame game = new TriviaGame();
+        new TriviaGame();
         Scanner input = new Scanner(System.in);
-        game.fileRead("spaceTrivia.txt");
-
+        TriviaGame.fileRead("spaceTrivia.txt");
+        TriviaGame.IntroLogo();
 
         System.out.println("Welcome to the Trivia Game!");
-        System.out.println("Are you ready to start?(y/n)");
-        if(input.nextLine().equals("y")){
-            game.askQuestion();
+        System.out.println("Are you ready to start?(" + ANSI_GREEN + "y" + ANSI_RESET + "/"
+                + ANSI_RED + "n" + ANSI_RESET + ")");
+        if (input.nextLine().toLowerCase().equals("y")) {
+            Boolean continuePlaying = true;
+            while (continuePlaying) {
+                for (int i = 0; i < 2; i++) { System.out.println(); }
+                if (TriviaGame.askQuestion()) {
+                    System.out.println("correct");
+                } else {
+                    System.out.println("Wrong");
+                }
 
+            }
         }
     }
 }

@@ -1,6 +1,7 @@
 package Unit6_Arrays.Homework.Trivia;
 
 import java.io.File;
+import java.util.Locale;
 import java.util.Scanner;
 import java.io.FileNotFoundException;
 
@@ -56,10 +57,6 @@ public class TriviaGame {
                 answerChoices[j] = curAnswer;
 
             }
-             /*(String s : answerChoices){
-                   System.out.println(s);
-               }
-            System.out.println();*/
             gameQuestions[count] = new Question(currQuestion, answerChoices, correctAnswer, pointValue);
             count++;
 
@@ -67,10 +64,19 @@ public class TriviaGame {
     }
 
 
-    public static void askQuestion(){
+    public static boolean askQuestion(){
+        Scanner input = new Scanner(System.in);
         int random = (int)(Math.random() * 12);
         System.out.println(gameQuestions[random].toString());
-        printStats();
+        //printStats();
+        System.out.println(gameQuestions[random].getCorrectAnswer());
+        System.out.print("Your Answer: ");
+        String response = input.nextLine().toLowerCase();
+        if (response.equals(gameQuestions[random].getCorrectAnswer())){
+            return true;
+        }else {
+            return false;
+        }
     }
 
     public static void printStats(){
@@ -81,4 +87,24 @@ public class TriviaGame {
     }
 
 
+    public static void IntroLogo(){
+        System.out.println(ANSI_PURPLE + "                                              %@@@@@@@&                                                       \n" +
+                "          &@@@@@@@@@@@@@@@ @@@@@@@@@@@@,     @@@@@@@@@@@    &@@@@@@@ @@@@@@@ @@@@@@@@     @@@@@@@&             \n" +
+                "          &@@@ @@@@@@ @@@@ @@@@@@  @@@@@@   @@@@@@@@@@@@@    @@@@@@   @@@@@   @@@@@@     @@@@@@@@@             \n" +
+                "               @@@@@@      @@@@@@  @@@@@@    @@@@@@@@@@@      @@@@@@ ,@@@@    @@@@@@    @@@@@(@@@@@            \n" +
+                "               @@@@@@      @@@@@@@@@@@@        @@@@@@@         @@@@@ @@@@.    @@@@@@    @@@@  @@@@@@           \n" +
+                "               @@@@@@      @@@@@@  @@@@@@                      %@@@@@@@@@     @@@@@@   @@@@@@ *@@@@@           \n" +
+                "              @@@@@@@@    @@@@@@@@ @@@@@@@      @@@@@           @@@@@@@@     @@@@@@@@ @@@@@@@ @@@@@@@          \n" +
+                "                                                 @@@                                                  " + ANSI_RESET);
+    }
+
+
+
+
+    public static Question[] getGameQuestions() { return gameQuestions; }
+    public static void setGameQuestions(Question[] gameQuestions) { TriviaGame.gameQuestions = gameQuestions; }
+    public static int getScore() { return score; }
+    public static void setScore(int score) { TriviaGame.score = score; }
+    public static int getAnswerStreak() { return answerStreak; }
+    public static void setAnswerStreak(int answerStreak) { TriviaGame.answerStreak = answerStreak; }
 }
