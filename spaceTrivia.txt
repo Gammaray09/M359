@@ -1,11 +1,11 @@
 Which animal did not get sent to space?
-100
+200
 dog
 mouse
 spider
 bat*
 Which Apollo mission had to abort in space?
-100
+150
 Apollo 13*
 Apollo 11
 Apollo 14
@@ -16,38 +16,38 @@ two
 three
 four
 five*
-What is the name of the space probe studied Saturn?
-100
+What is the name of the space probe that studied Saturn?
+250
 Cassini*
 Voyager 1
 Galileo
 Juno
-How many satellites are in space currenty?
+How many satellites are in space currently?
 100
 350
 7500*
 200000
 840
 What is the only spacecraft to visit Uranus?
-100
+200
 Pioneer 11
 New Horizons
 Voyager 1
 Voyager 2*
 Who was the first person to go to space?
-100
+300
 Boris Yegorov
 Alexei Leonov
 Yuri Gagarin*
 Sergei Krikalev
 What space shuttle blew up on re-entry?
-100
+150
 Columbia*
 Discovery
 Atlantis
 Endeavour
 What is the most powerful rocket currently?
-100
+200
 Falcon 9
 Saturn V
 Soyuz
@@ -59,7 +59,7 @@ International Space Station
 Skylab
 Tiangong
 How Much Did it Cost to Create the Space Shuttle?
-100
+300
 $800,000
 $3.5 million
 $10.6 Billion*

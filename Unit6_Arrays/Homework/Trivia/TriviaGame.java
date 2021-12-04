@@ -1,37 +1,36 @@
 package Unit6_Arrays.Homework.Trivia;
 
 import java.io.File;
-import java.util.Locale;
+import java.security.PrivateKey;
 import java.util.Scanner;
 import java.io.FileNotFoundException;
 
 
 public class TriviaGame {
 
-    public static final String ANSI_RESET = "\u001B[0m";
-    public static final String ANSI_BLACK = "\u001B[30m";
-    public static final String ANSI_RED = "\u001B[31m";
+    public static final String RESET = "\u001B[0m";
     public static final String ANSI_GREEN = "\u001B[32m";
-    public static final String ANSI_YELLOW = "\u001B[33m";
     public static final String ANSI_BLUE = "\u001B[34m";
-    public static final String ANSI_PURPLE = "\u001B[35m";
-    public static final String ANSI_CYAN = "\u001B[36m";
-    public static final String ANSI_WHITE = "\u001B[37m";
+    public static final String PURPLE_BRIGHT = "\033[0;95m";
+    public static final String BOXING = "\033[0;51m";   // BLACK
 
-    private static Question[] gameQuestions;
-    private static int score;
-    private static int answerStreak;
+
+    private Question[] gameQuestions;
+    private int score;
+    private int answerStreak;
+    private int numRight;
 
     public TriviaGame() {
         gameQuestions = new Question[12];
         this.score = 0;
         this.answerStreak = 0;
+        this.numRight = 0;
     }
 
 
 
 
-    public static void fileRead(String filename) throws FileNotFoundException{
+    public void fileRead(String filename) throws FileNotFoundException{
 
         File myFile = new File(filename);
         Scanner fileIn = new Scanner(myFile);
@@ -63,48 +62,101 @@ public class TriviaGame {
         }
     }
 
+    public boolean checkArr(){
+        int count = 0;
+        for (Question q : gameQuestions){
+            if (q == null){
+                count++;
+            }
+        }
 
-    public static boolean askQuestion(){
-        Scanner input = new Scanner(System.in);
-        int random = (int)(Math.random() * 12);
-        System.out.println(gameQuestions[random].toString());
-        //printStats();
-        System.out.println(gameQuestions[random].getCorrectAnswer());
-        System.out.print("Your Answer: ");
-        String response = input.nextLine().toLowerCase();
-        if (response.equals(gameQuestions[random].getCorrectAnswer())){
-            return true;
-        }else {
+        if(count == 12){
             return false;
+        } else{
+            return true;
         }
     }
 
-    public static void printStats(){
-        System.out.println(ANSI_GREEN + "**********STATS**********" + ANSI_RESET);
-        System.out.println("SCORE: "+ score + ANSI_RESET);
-        System.out.println("STREAK: "+ answerStreak + ANSI_RESET);
-        System.out.println(ANSI_GREEN + "*************************" + ANSI_RESET);
+
+    public int askQuestion(){
+        Scanner input = new Scanner(System.in);
+
+        if(checkArr() == false){
+            return -1;
+        }
+
+        int random = (int)(Math.random() * 12);
+        while(gameQuestions[random] == null){
+            if(random == 11){
+                random = 0;
+            } else{
+                random++;
+            }
+        }
+
+        System.out.println(gameQuestions[random].toString());
+        System.out.print(ANSI_GREEN + "Your Answer: " + RESET);
+        String response = input.nextLine().toLowerCase();
+
+        if (response.equals(gameQuestions[random].getCorrectAnswer().toLowerCase())){
+            numRight++;
+            statsChange(true,gameQuestions[random].getPointValue(), gameQuestions[random].getCorrectAnswer());
+            gameQuestions[random] = null;
+            return 1;
+        }else {
+            statsChange(false,gameQuestions[random].getPointValue(), gameQuestions[random].getCorrectAnswer());
+            gameQuestions[random] = null;
+            return 0;
+        }
+
+    }
+
+    public void statsChange(boolean isCorrect, int pointValue, String correctAnswer){
+        if(isCorrect){
+            score += pointValue;
+            answerStreak++;
+            System.out.println("Congrats! Your answer is correct! :)\n");
+            System.out.println(BOXING + " You gained " + pointValue + " points " + RESET);
+            printStats();
+        } else {
+            score -= pointValue;
+            answerStreak = 0;
+            System.out.println("Unfortunately Your answer is incorrect :(\n");
+            System.out.println("The correct answer is: " + correctAnswer);
+            System.out.println(BOXING + " You lost " + pointValue + " points " + RESET);
+            printStats();
+        }
+    }
+
+    public void printStats(){
+        System.out.println(ANSI_GREEN + "**********STATS**********" + RESET);
+        System.out.println(ANSI_BLUE + "SCORE: "+ score + RESET);
+        System.out.println(ANSI_BLUE + "STREAK: "+ answerStreak + RESET);
+        System.out.println(ANSI_BLUE + "QUESTION RIGHT: "+ numRight + RESET);
+        System.out.println(ANSI_GREEN + "*************************\n" + RESET);
     }
 
 
     public static void IntroLogo(){
-        System.out.println(ANSI_PURPLE + "                                              %@@@@@@@&                                                       \n" +
+        System.out.println(PURPLE_BRIGHT + "                                              %@@@@@@@&                                                       \n" +
                 "          &@@@@@@@@@@@@@@@ @@@@@@@@@@@@,     @@@@@@@@@@@    &@@@@@@@ @@@@@@@ @@@@@@@@     @@@@@@@&             \n" +
                 "          &@@@ @@@@@@ @@@@ @@@@@@  @@@@@@   @@@@@@@@@@@@@    @@@@@@   @@@@@   @@@@@@     @@@@@@@@@             \n" +
                 "               @@@@@@      @@@@@@  @@@@@@    @@@@@@@@@@@      @@@@@@ ,@@@@    @@@@@@    @@@@@(@@@@@            \n" +
                 "               @@@@@@      @@@@@@@@@@@@        @@@@@@@         @@@@@ @@@@.    @@@@@@    @@@@  @@@@@@           \n" +
                 "               @@@@@@      @@@@@@  @@@@@@                      %@@@@@@@@@     @@@@@@   @@@@@@ *@@@@@           \n" +
                 "              @@@@@@@@    @@@@@@@@ @@@@@@@      @@@@@           @@@@@@@@     @@@@@@@@ @@@@@@@ @@@@@@@          \n" +
-                "                                                 @@@                                                  " + ANSI_RESET);
+                "                                                 @@@                                                  " + RESET);
     }
 
 
 
 
-    public static Question[] getGameQuestions() { return gameQuestions; }
-    public static void setGameQuestions(Question[] gameQuestions) { TriviaGame.gameQuestions = gameQuestions; }
-    public static int getScore() { return score; }
-    public static void setScore(int score) { TriviaGame.score = score; }
-    public static int getAnswerStreak() { return answerStreak; }
-    public static void setAnswerStreak(int answerStreak) { TriviaGame.answerStreak = answerStreak; }
+    public Question[] getGameQuestions() { return gameQuestions; }
+    public void setGameQuestions(Question[] gameQuestions) { this.gameQuestions = gameQuestions; }
+    public int getScore() { return score; }
+    public void setScore(int score) { this.score = score; }
+    public int getAnswerStreak() { return answerStreak; }
+    public void setAnswerStreak(int answerStreak) { this.answerStreak = answerStreak; }
+    public int getNumRight() {return numRight;}
+    public void setNumRight(int numRight) {this.numRight = numRight;}
 }

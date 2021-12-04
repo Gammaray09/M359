@@ -4,14 +4,9 @@ package Unit6_Arrays.Homework.Trivia;
 public class Question {
 
     public static final String ANSI_RESET = "\u001B[0m";
-    public static final String ANSI_BLACK = "\u001B[30m";
-    public static final String ANSI_RED = "\u001B[31m";
-    public static final String ANSI_GREEN = "\u001B[32m";
-    public static final String ANSI_YELLOW = "\u001B[33m";
-    public static final String ANSI_BLUE = "\u001B[34m";
-    public static final String ANSI_PURPLE = "\u001B[35m";
-    public static final String ANSI_CYAN = "\u001B[36m";
-    public static final String ANSI_WHITE = "\u001B[37m";
+    public static final String BLUE_BOLD = "\033[1;34m";   // BLUE
+    public static final String PURPLE_BRIGHT = "\033[0;95m";
+
 
     private String question;
     private String[] answerChoices;
@@ -39,11 +34,13 @@ public class Question {
 
 
     public String toString() {
-        String output = question + "\n";
-        output += ANSI_BLUE + " **This question is worth " + pointValue + " points**\n" + ANSI_RESET;
+        String output = PURPLE_BRIGHT  + question + "\n" + ANSI_RESET;
+        output += BLUE_BOLD + "**" + pointValue + " points**\n" + ANSI_RESET;
         for ( String s : answerChoices) {
-            output += ANSI_PURPLE + "\t" + s + "\n" + ANSI_RESET;
+            output += "\t-" + s + "\n";
         }
         return output;
     }
+
+
 }

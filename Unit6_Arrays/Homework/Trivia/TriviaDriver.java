@@ -5,38 +5,57 @@ import java.util.Scanner;
 
 
 public class TriviaDriver {
-    public static final String ANSI_RESET = "\u001B[0m";
-    public static final String ANSI_BLACK = "\u001B[30m";
-    public static final String ANSI_RED = "\u001B[31m";
-    public static final String ANSI_GREEN = "\u001B[32m";
-    public static final String ANSI_YELLOW = "\u001B[33m";
-    public static final String ANSI_BLUE = "\u001B[34m";
-    public static final String ANSI_PURPLE = "\u001B[35m";
-    public static final String ANSI_CYAN = "\u001B[36m";
-    public static final String ANSI_WHITE = "\u001B[37m";
+    public static final String RESET = "\u001B[0m";
+    public static final String GREEN_BRIGHT = "\033[0;92m";
+    public static final String TEAL = "\033[38;2;0;225;221m";
+    public static final String GREEN = "\033[0;32m";
+    public static final String BLUE = "\033[0;34m";
 
+
+    private static int questionCount = 0;
 
     public static void main(String[] args) throws FileNotFoundException {
-        new TriviaGame();
+        TriviaGame game = new TriviaGame();
         Scanner input = new Scanner(System.in);
-        TriviaGame.fileRead("spaceTrivia.txt");
+        game.fileRead("spaceTrivia.txt");
         TriviaGame.IntroLogo();
 
-        System.out.println("Welcome to the Trivia Game!");
-        System.out.println("Are you ready to start?(" + ANSI_GREEN + "y" + ANSI_RESET + "/"
-                + ANSI_RED + "n" + ANSI_RESET + ")");
+        System.out.println(TEAL + "Welcome to the Trivia Game! Here are the rules... You will be asked a question \n" +
+                                        "and you will be given answer choice. Type one of the answers in to see if you \n" +
+                                        "the question right or wrong. Each question has a point value that will be added \n" +
+                                        "or subtracted and you answer streak will be tracked. After each question you can \n" +
+                                        "choose if you want to keep playing your leave the game. Have fun!" + RESET);
+
+        System.out.print(GREEN_BRIGHT + "Are you ready to start?(y/n): "+ RESET );
+
         if (input.nextLine().toLowerCase().equals("y")) {
-            Boolean continuePlaying = true;
-            while (continuePlaying) {
+            while (true) {
                 for (int i = 0; i < 2; i++) { System.out.println(); }
-                if (TriviaGame.askQuestion()) {
-                    System.out.println("correct");
-                } else {
-                    System.out.println("Wrong");
+                questionCount++;
+                int endgame = game.askQuestion();
+
+                if (endgame == -1){
+                    System.out.println(GREEN_BRIGHT + "All Questions Have Been Asked" + RESET);
+                    break;
                 }
 
+                System.out.print(GREEN_BRIGHT + "Next Question[1] or Quit[0]: " + RESET);
+                if(input.nextLine().toLowerCase().equals("0")){
+                    break;
+                }
             }
         }
+
+        int numWrong = questionCount -game.getNumRight();
+        int Accuracy = game.getNumRight()/questionCount;
+
+        System.out.println(GREEN + "********Finale STATS********" + RESET);
+        System.out.println(BLUE + "SCORE: "+ game.getScore() + RESET);
+        System.out.println(BLUE + "STREAK: "+ game.getAnswerStreak() + RESET);
+        System.out.println(BLUE + "QUESTION RIGHT: "+ game.getNumRight() + RESET);
+        System.out.println(BLUE + "QUESTION WRONG: "+numWrong + RESET);
+        System.out.println(BLUE + "ACCURACY: "+ Accuracy + "%" + RESET);
+        System.out.println(GREEN + "****************************\n" + RESET);
     }
 }
 
