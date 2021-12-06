@@ -47,7 +47,7 @@ public class TriviaDriver {
         }
 
         int numWrong = questionCount -game.getNumRight();
-        int Accuracy = game.getNumRight()/questionCount;
+        double Accuracy = (game.getNumRight()/(double)questionCount) * 100;
 
         System.out.println(GREEN + "********Finale STATS********" + RESET);
         System.out.println(BLUE + "SCORE: "+ game.getScore() + RESET);

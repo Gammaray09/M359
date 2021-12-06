@@ -37,7 +37,7 @@ public class Question {
         String output = PURPLE_BRIGHT  + question + "\n" + ANSI_RESET;
         output += BLUE_BOLD + "**" + pointValue + " points**\n" + ANSI_RESET;
         for ( String s : answerChoices) {
-            output += "\t-" + s + "\n";
+            output += "\t" + s + "\n";
         }
         return output;
     }
