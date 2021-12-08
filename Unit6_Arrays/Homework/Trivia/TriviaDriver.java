@@ -11,6 +11,8 @@ public class TriviaDriver {
     public static final String TEAL = "\033[38;2;0;225;221m";
     public static final String GREEN = "\033[0;32m";
     public static final String BLUE = "\033[0;34m";
+    public static final String RED = "\033[0;31m";
+    public static final String RED_BRIGHT = "\033[0;91m";    // RED
 
     // counts how many question have been asked
     private static int questionCount = 0;
@@ -25,7 +27,7 @@ public class TriviaDriver {
         TriviaGame.IntroLogo();
 
         // Asks user for name
-        System.out.print(GREEN_BRIGHT +  "Hello Player! Cual es tu nombre? "+ RESET);
+        System.out.print(GREEN_BRIGHT +  "Hello Player! What is your name? "+ RESET);
         String name = input.nextLine();
 
         //instructions
@@ -59,13 +61,18 @@ public class TriviaDriver {
                 }
             }
         } else {
-            System.out.println("Are you kidding me? Why would you even run the program if you did not want to play.\n" +
-                               "Do you know how long it takes to set up everything!? Did you not see the logo I made \n" +
-                               "completely in ASCII? That clever design was not easy to make. I also said all of the\n" +
-                               "instructions and now you are telling me that you don't want to play. Fine... I guess\n " +
-                                "I will have to annoy you until you say yes.");
+            // what happens when you annoy the program
+            System.out.println(RED + "Are you kidding me? Why would you even run the program if you did not want to play.\n" +
+                    "Do you know how long it takes to set up everything!? Did you not see the logo I made \n" +
+                    "completely in ASCII? That clever design was not easy to make. I also said all of the\n" +
+                    "instructions and now you are telling me that you don't want to play. Fine...I guess\n " +
+                    "I will have to annoy you until you say yes." + RESET);
             while (true){
-                System.out.println("");
+                System.out.print(RED_BRIGHT + "Do you want to play now?(y/n): " + RESET);
+                String userInput = input.nextLine();
+                if(userInput.equals("y")) {
+                    System.out.println(RED_BRIGHT + "Too Late" + RESET);
+                }
             }
         }
 

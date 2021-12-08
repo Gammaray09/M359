@@ -8,18 +8,20 @@ import java.io.FileNotFoundException;
 
 public class TriviaGame {
 
+    //Colors used for text output
     public static final String RESET = "\u001B[0m";
     public static final String ANSI_GREEN = "\u001B[32m";
     public static final String ANSI_BLUE = "\u001B[34m";
     public static final String PURPLE_BRIGHT = "\033[0;95m";
     public static final String BOXING = "\033[0;51m";   // BLACK
 
-
+    // instance variables
     private Question[] gameQuestions;
     private int score;
     private int answerStreak;
     private int numRight;
 
+    //constructor sets array length to 12 and the rest of the variables to zero
     public TriviaGame() {
         gameQuestions = new Question[12];
         this.score = 0;
@@ -28,8 +30,14 @@ public class TriviaGame {
     }
 
 
-
-
+    /**
+     * This method reads the text file that is passed in and
+     * makes each question into an question object. The question objects are then
+     * added to the gameQuestions array
+     *
+     * @param filename takes in a the name of the file as a string
+     * @throws FileNotFoundException
+     */
     public void fileRead(String filename) throws FileNotFoundException{
 
         File myFile = new File(filename);
@@ -62,6 +70,12 @@ public class TriviaGame {
         }
     }
 
+    /**
+     * Checks to see if the array is all null and returns true if it is
+     * This method is used see if alll questions have been asked
+     *
+     * @return returns a true or false
+     */
     public boolean checkArr(){
         int count = 0;
         for (Question q : gameQuestions){
@@ -77,7 +91,13 @@ public class TriviaGame {
         }
     }
 
-
+    /**
+     * This method asks a random question from the array and takes in the users input.
+     * This method calls the statsChange method to change the score of the player depending on if they
+     * got the answer right or wrong.
+     *
+     * @return returns 1 if answer is right, 0 if answer wrong, and -1 if all question have been asked
+     */
     public int askQuestion(){
         Scanner input = new Scanner(System.in);
 
@@ -111,6 +131,16 @@ public class TriviaGame {
 
     }
 
+
+    /**
+     * This method changes the score and stats of the player depending on if they got
+     * the answer right or wrong. This method also lets the player know if they got it right or wrong,
+     * the correct answer, and their current stats.
+     *
+     * @param isCorrect variable to see if answer was correct or not
+     * @param pointValue how much the current question is worth
+     * @param correctAnswer what the answer of the current question is
+     */
     public void statsChange(boolean isCorrect, int pointValue, String correctAnswer){
         if(isCorrect){
             score += pointValue;
@@ -128,6 +158,9 @@ public class TriviaGame {
         }
     }
 
+    /**
+     * Prints that stats and score of the player is a specific format
+     */
     public void printStats(){
         System.out.println(ANSI_GREEN + "**********STATS**********" + RESET);
         System.out.println(ANSI_BLUE + "SCORE: "+ score + RESET);
@@ -137,6 +170,9 @@ public class TriviaGame {
     }
 
 
+    /**
+     * Prints intro logo for the program
+     */
     public static void IntroLogo(){
         System.out.println(PURPLE_BRIGHT + "                                              %@@@@@@@&                                                       \n" +
                 "          &@@@@@@@@@@@@@@@ @@@@@@@@@@@@,     @@@@@@@@@@@    &@@@@@@@ @@@@@@@ @@@@@@@@     @@@@@@@&             \n" +
@@ -150,7 +186,7 @@ public class TriviaGame {
 
 
 
-
+    //Accessor methods
     public Question[] getGameQuestions() { return gameQuestions; }
     public void setGameQuestions(Question[] gameQuestions) { this.gameQuestions = gameQuestions; }
     public int getScore() { return score; }
