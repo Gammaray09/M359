@@ -53,7 +53,7 @@
       <recent name="C:\Users\aashm\OneDrive\Documents\GitHub\M359" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.TriviaDriver">
+  <component name="RunManager" selected="Application.hwtest">
     <configuration name="Basketball_Tester" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Unit5_WritingClasses.examples.basketball.Basketball_Tester" />
       <module name="M359" />
@@ -128,10 +128,10 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.hwtest" />
         <item itemvalue="Application.TriviaDriver" />
         <item itemvalue="Application.TriviaGame" />
         <item itemvalue="Application.FileReadExample" />
-        <item itemvalue="Application.hwtest" />
         <item itemvalue="Application.Basketball_Tester" />
       </list>
     </recent_temporary>
