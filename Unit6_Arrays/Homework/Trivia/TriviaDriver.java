@@ -39,18 +39,38 @@ public class TriviaDriver {
 
         System.out.print(GREEN_BRIGHT + "Are you ready to start?(y/n): "+ RESET );
 
+        boolean stillPlaying = true;
+
         // if statement to see if players wants to start game
         if (input.nextLine().toLowerCase().equals("y")) {
-            while (true) {
+            while (stillPlaying) {
                 for (int i = 0; i < 2; i++) { System.out.println(); }
                 questionCount++;
                 // stores number returned from askQuestion method
                 int endgame = game.askQuestion();
 
                 // means that all question have been asked
+                //asks if player wants to player again
                 if (endgame == -1){
                     System.out.println(GREEN_BRIGHT + "All Questions Have Been Asked" + RESET);
-                    break;
+
+                    //calculates and prints final stats
+                    int numWrong = questionCount -game.getNumRight();
+                    double Accuracy = (game.getNumRight()/(double)questionCount) * 100;
+                    game.printFinaleStats(numWrong, Accuracy);
+
+
+                    System.out.print(GREEN_BRIGHT + "Do you want to play again?(y/n): " + RESET);
+                    String playAgain = input.nextLine();
+                    if (playAgain.toLowerCase().equals("y")){
+                        //question array is reset
+                        game.fileRead("spaceTrivia.txt");
+                        game.IntroLogo();
+                    }else{
+                        System.out.println("Thanks For Playing!");
+                        // program is ended
+                        break;
+                    }
                 }
 
                 // asks if players want to continue after question
@@ -76,19 +96,6 @@ public class TriviaDriver {
             }
         }
 
-        //calculates final stats
-        int numWrong = questionCount -game.getNumRight();
-        double Accuracy = (game.getNumRight()/(double)questionCount) * 100;
-
-
-        //prints out final stats and ends program
-        System.out.println(GREEN + "********Finale STATS********" + RESET);
-        System.out.println(BLUE + "SCORE: "+ game.getScore() + RESET);
-        System.out.println(BLUE + "STREAK: "+ game.getAnswerStreak() + RESET);
-        System.out.println(BLUE + "QUESTION RIGHT: "+ game.getNumRight() + RESET);
-        System.out.println(BLUE + "QUESTION WRONG: "+numWrong + RESET);
-        System.out.println(BLUE + "ACCURACY: "+ Accuracy + "%" + RESET);
-        System.out.println(GREEN + "****************************\n" + RESET);
     }
 }
 
