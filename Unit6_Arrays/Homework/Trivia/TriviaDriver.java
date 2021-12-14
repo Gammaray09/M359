@@ -63,8 +63,11 @@ public class TriviaDriver {
                     System.out.print(GREEN_BRIGHT + "Do you want to play again?(y/n): " + RESET);
                     String playAgain = input.nextLine();
                     if (playAgain.toLowerCase().equals("y")){
-                        //question array is reset
+                        //question array and stats are reset
                         game.fileRead("spaceTrivia.txt");
+                        game.setAnswerStreak(0);
+                        game.setScore(0);
+                        game.setNumRight(0);
                         game.IntroLogo();
                     }else{
                         System.out.println("Thanks For Playing!");
@@ -85,7 +88,7 @@ public class TriviaDriver {
             System.out.println(RED + "Are you kidding me? Why would you even run the program if you did not want to play.\n" +
                     "Do you know how long it takes to set up everything!? Did you not see the logo I made \n" +
                     "completely in ASCII? That clever design was not easy to make. I also said all of the\n" +
-                    "instructions and now you are telling me that you don't want to play. Fine...I guess\n " +
+                    "instructions and now you are telling me that you don't want to play. Fine...I guess\n" +
                     "I will have to annoy you until you say yes." + RESET);
             while (true){
                 System.out.print(RED_BRIGHT + "Do you want to play now?(y/n): " + RESET);
