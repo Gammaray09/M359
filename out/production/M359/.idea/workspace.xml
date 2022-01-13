@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f6cded55-f257-4619-aec7-582a41f9c545" name="Default Changelist" comment="" />
+    <list default="true" id="f6cded55-f257-4619-aec7-582a41f9c545" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Unit7_ArrayList/Examples/Traversing_ArrayLists.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,7 +36,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Unit5_WritingClasses/examples/basketball" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -53,13 +56,13 @@
       <recent name="C:\Users\aashm\OneDrive\Documents\GitHub\M359" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.hwtest">
-    <configuration name="Basketball_Tester" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Unit5_WritingClasses.examples.basketball.Basketball_Tester" />
+  <component name="RunManager" selected="Application.Traversing_ArrayLists">
+    <configuration name="FileReadExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Unit6_Arrays.Examples.StudentProgram.FileReadExample" />
       <module name="M359" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Unit5_WritingClasses.examples.basketball.*" />
+          <option name="PATTERN" value="Unit6_Arrays.Examples.StudentProgram.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -67,12 +70,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FileReadExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Unit6_Arrays.Examples.StudentProgram.FileReadExample" />
+    <configuration name="Traversing_ArrayLists" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Unit7_ArrayList.Examples.Traversing_ArrayLists" />
       <module name="M359" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Unit6_Arrays.Examples.StudentProgram.*" />
+          <option name="PATTERN" value="Unit7_ArrayList.Examples.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -120,19 +123,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Basketball_Tester" />
       <item itemvalue="Application.hwtest" />
       <item itemvalue="Application.FileReadExample" />
       <item itemvalue="Application.TriviaDriver" />
       <item itemvalue="Application.TriviaGame" />
+      <item itemvalue="Application.Traversing_ArrayLists" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.hwtest" />
+        <item itemvalue="Application.Traversing_ArrayLists" />
         <item itemvalue="Application.TriviaDriver" />
+        <item itemvalue="Application.hwtest" />
         <item itemvalue="Application.TriviaGame" />
         <item itemvalue="Application.FileReadExample" />
-        <item itemvalue="Application.Basketball_Tester" />
       </list>
     </recent_temporary>
   </component>
@@ -157,6 +160,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -169,11 +173,11 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/M359$ChevyDriverStudent.ic" NAME="ChevyDriverStudent Coverage Results" MODIFIED="1632445960802" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>Unit3_Booleans_IfStatements.Homework.ChevroletLab.*</FILTER>
-    </SUITE>
     <SUITE FILE_PATH="coverage/M359$StudentTester.ic" NAME="StudentTester Coverage Results" MODIFIED="1632445124706" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>Unit3_Booleans_IfStatements.examples.Student.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/M359$ChevyDriverStudent.ic" NAME="ChevyDriverStudent Coverage Results" MODIFIED="1632445960802" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>Unit3_Booleans_IfStatements.Homework.ChevroletLab.*</FILTER>
     </SUITE>
   </component>
 </project>

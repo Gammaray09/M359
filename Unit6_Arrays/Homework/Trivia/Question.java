@@ -5,7 +5,7 @@ public class Question {
 
     //Colors used for text output
     public static final String ANSI_RESET = "\u001B[0m";
-    public static final String BLUE_BOLD = "\033[1;34m";   // BLUE
+    public static final String BLUE_BOLD = "\033[1;34m";
     public static final String PURPLE_BRIGHT = "\033[0;95m";
 
     //instance variables
@@ -33,8 +33,11 @@ public class Question {
     public void setPointValue(int pointValue) { this.pointValue = pointValue; }
 
 
-
-    // method that prints question and answer choices in proper format
+    /**
+     * this method prints out the question and answer choices in a proper format
+     *
+     * @return returns a String of the questions and answer choices
+     */
     public String toString() {
         String output = PURPLE_BRIGHT  + question + "\n" + ANSI_RESET;
         output += BLUE_BOLD + "**" + pointValue + " points**\n" + ANSI_RESET;

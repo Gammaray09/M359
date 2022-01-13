@@ -13,7 +13,9 @@ public class TriviaGame {
     public static final String ANSI_GREEN = "\u001B[32m";
     public static final String ANSI_BLUE = "\u001B[34m";
     public static final String PURPLE_BRIGHT = "\033[0;95m";
-    public static final String BOXING = "\033[0;51m";   // BLACK
+    public static final String BOXING = "\033[0;51m";
+    public static final String GREEN = "\033[0;32m";
+    public static final String BLUE = "\033[0;34m";
 
     // instance variables
     private Question[] gameQuestions;
@@ -70,6 +72,7 @@ public class TriviaGame {
         }
     }
 
+
     /**
      * Checks to see if the array is all null and returns true if it is
      * This method is used see if alll questions have been asked
@@ -90,6 +93,7 @@ public class TriviaGame {
             return true;
         }
     }
+
 
     /**
      * This method asks a random question from the array and takes in the users input.
@@ -158,6 +162,7 @@ public class TriviaGame {
         }
     }
 
+
     /**
      * Prints that stats and score of the player is a specific format
      */
@@ -169,6 +174,24 @@ public class TriviaGame {
         System.out.println(ANSI_GREEN + "*************************\n" + RESET);
     }
 
+
+    /**
+     *
+     * This method prints the final stats of the game in proper format
+     * numWrong and accuracy are calculated before method is called
+     *
+     * @param numWrong passes in an int for number of questions wrong
+     * @param accuracy passes in a double for accuracy
+     */
+    public void printFinaleStats(int numWrong, double accuracy){
+        System.out.println(GREEN + "********Finale STATS********" + RESET);
+        System.out.println(BLUE + "SCORE: "+ score + RESET);
+        System.out.println(BLUE + "STREAK: "+ answerStreak + RESET);
+        System.out.println(BLUE + "QUESTION RIGHT: "+ numRight + RESET);
+        System.out.println(BLUE + "QUESTION WRONG: "+numWrong + RESET);
+        System.out.println(BLUE + "ACCURACY: "+ accuracy + "%" + RESET);
+        System.out.println(GREEN + "****************************\n" + RESET);
+    }
 
     /**
      * Prints intro logo for the program
