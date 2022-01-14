@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f6cded55-f257-4619-aec7-582a41f9c545" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Unit7_ArrayList/Lab/Show.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Unit7_ArrayList/Lab/TicketMaster.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Unit7_ArrayList/Lab/TicketMasterDriver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/showData.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unit7_ArrayList/Lab/Show.java" beforeDir="false" afterPath="$PROJECT_DIR$/Unit7_ArrayList/Lab/Show.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unit7_ArrayList/Lab/TicketMaster.java" beforeDir="false" afterPath="$PROJECT_DIR$/Unit7_ArrayList/Lab/TicketMaster.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unit7_ArrayList/Lab/TicketMasterDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/Unit7_ArrayList/Lab/TicketMasterDriver.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,13 +59,13 @@
       <recent name="C:\Users\aashm\OneDrive\Documents\GitHub\M359" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Traversing_ArrayLists">
-    <configuration name="FileReadExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Unit6_Arrays.Examples.StudentProgram.FileReadExample" />
+  <component name="RunManager" selected="Application.TicketMasterDriver">
+    <configuration name="TicketMasterDriver" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Unit7_ArrayList.Lab.TicketMasterDriver" />
       <module name="M359" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Unit6_Arrays.Examples.StudentProgram.*" />
+          <option name="PATTERN" value="Unit7_ArrayList.Lab.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -126,18 +127,18 @@
     </configuration>
     <list>
       <item itemvalue="Application.hwtest" />
-      <item itemvalue="Application.FileReadExample" />
       <item itemvalue="Application.TriviaDriver" />
       <item itemvalue="Application.TriviaGame" />
       <item itemvalue="Application.Traversing_ArrayLists" />
+      <item itemvalue="Application.TicketMasterDriver" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.TicketMasterDriver" />
         <item itemvalue="Application.Traversing_ArrayLists" />
         <item itemvalue="Application.TriviaDriver" />
         <item itemvalue="Application.hwtest" />
         <item itemvalue="Application.TriviaGame" />
-        <item itemvalue="Application.FileReadExample" />
       </list>
     </recent_temporary>
   </component>
@@ -175,11 +176,11 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/M359$StudentTester.ic" NAME="StudentTester Coverage Results" MODIFIED="1632445124706" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>Unit3_Booleans_IfStatements.examples.Student.*</FILTER>
-    </SUITE>
     <SUITE FILE_PATH="coverage/M359$ChevyDriverStudent.ic" NAME="ChevyDriverStudent Coverage Results" MODIFIED="1632445960802" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>Unit3_Booleans_IfStatements.Homework.ChevroletLab.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/M359$StudentTester.ic" NAME="StudentTester Coverage Results" MODIFIED="1632445124706" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>Unit3_Booleans_IfStatements.examples.Student.*</FILTER>
     </SUITE>
   </component>
 </project>
