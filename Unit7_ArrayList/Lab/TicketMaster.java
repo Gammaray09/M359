@@ -8,6 +8,9 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class TicketMaster {
+    public static final String GREEN = "\033[0;32m";   // GREEN
+    public static final String RESET = "\033[0m";  // Text Reset
+
     private ArrayList<Show> showsList;
 
     public TicketMaster() {
@@ -34,10 +37,13 @@ public class TicketMaster {
 
 
     public void printData(){
-        System.out.println("Date\t\tPrice\t\tQty\t\t Performer\t\t\tCity");
-        System.out.println("-------------------------------------------------------------");
+        System.out.println(GREEN + "Date\t\tPrice\t\tQty\t\t Performer\t\t\tCity");
+        System.out.println("-------------------------------------------------------------" + RESET);
         for(Show s: showsList){
             System.out.println(s);
         }
+        System.out.println(GREEN + "-------------------------------------------------------------"+ RESET );
     }
+
+
 }

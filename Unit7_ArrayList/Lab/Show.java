@@ -30,6 +30,14 @@ public class Show {
 
 
     public String toString() {
-        return date +"\t$" + price + "\t\t" + quantity + "\t\t" + name + "\t\t" + location;
+        String newWord = name;
+        String space ="";
+        if(name.length() < 20){
+            int spaceAdd = 20 - name.length();
+            for (int i = 0; i < spaceAdd; i++) {
+                space += " ";
+            }
+        }
+        return date +"\t$" + price + "\t\t" + quantity + "\t\t" + name + space + location;
     }
 }
