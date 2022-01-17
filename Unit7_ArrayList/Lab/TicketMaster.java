@@ -46,4 +46,15 @@ public class TicketMaster {
     }
 
 
+    public void searchCity(String city){
+        city = city.toLowerCase();
+        System.out.println(GREEN + "Date\t\tPrice\t\tQty\t\t Performer\t\t\tCity");
+        System.out.println("-------------------------------------------------------------" + RESET);
+        for(Show s: showsList) {
+            if (s.getLocation().toLowerCase().equals(city)){
+                System.out.println(s);
+            }
+        }
+        System.out.println(GREEN + "-------------------------------------------------------------"+ RESET );
+    }
 }
