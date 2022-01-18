@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f6cded55-f257-4619-aec7-582a41f9c545" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Unit7_ArrayList/Examples/TryCatch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Unit7_ArrayList/Lab/TicketMaster.java" beforeDir="false" afterPath="$PROJECT_DIR$/Unit7_ArrayList/Lab/TicketMaster.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Unit7_ArrayList/Lab/TicketMasterDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/Unit7_ArrayList/Lab/TicketMasterDriver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/M359/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/M359/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/M359/Unit7_ArrayList/Lab/TicketMasterDriver.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/M359/Unit7_ArrayList/Lab/TicketMasterDriver.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,12 +100,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TriviaGame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Unit6_Arrays.Homework.Trivia.TriviaGame" />
+    <configuration name="TryCatch" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Unit7_ArrayList.Examples.TryCatch" />
       <module name="M359" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Unit6_Arrays.Homework.Trivia.*" />
+          <option name="PATTERN" value="Unit7_ArrayList.Examples.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -126,17 +129,17 @@
     <list>
       <item itemvalue="Application.hwtest" />
       <item itemvalue="Application.TriviaDriver" />
-      <item itemvalue="Application.TriviaGame" />
       <item itemvalue="Application.Traversing_ArrayLists" />
       <item itemvalue="Application.TicketMasterDriver" />
+      <item itemvalue="Application.TryCatch" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.TicketMasterDriver" />
+        <item itemvalue="Application.TryCatch" />
         <item itemvalue="Application.Traversing_ArrayLists" />
         <item itemvalue="Application.TriviaDriver" />
         <item itemvalue="Application.hwtest" />
-        <item itemvalue="Application.TriviaGame" />
       </list>
     </recent_temporary>
   </component>
@@ -170,15 +173,20 @@
           <properties class="java.util.InputMismatchException" package="java.util" />
           <option name="timeStamp" value="1" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Unit7_ArrayList/Lab/TicketMasterDriver.java</url>
+          <line>22</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/M359$ChevyDriverStudent.ic" NAME="ChevyDriverStudent Coverage Results" MODIFIED="1632445960802" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>Unit3_Booleans_IfStatements.Homework.ChevroletLab.*</FILTER>
-    </SUITE>
     <SUITE FILE_PATH="coverage/M359$StudentTester.ic" NAME="StudentTester Coverage Results" MODIFIED="1632445124706" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>Unit3_Booleans_IfStatements.examples.Student.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/M359$ChevyDriverStudent.ic" NAME="ChevyDriverStudent Coverage Results" MODIFIED="1632445960802" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>Unit3_Booleans_IfStatements.Homework.ChevroletLab.*</FILTER>
     </SUITE>
   </component>
 </project>
