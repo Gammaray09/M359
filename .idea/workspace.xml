@@ -173,11 +173,6 @@
           <properties class="java.util.InputMismatchException" package="java.util" />
           <option name="timeStamp" value="1" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Unit7_ArrayList/Lab/TicketMasterDriver.java</url>
-          <line>22</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
