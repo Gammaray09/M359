@@ -7,6 +7,10 @@ public class Show {
     private String name;
     private String location;
 
+    public static final String BLUE = "\033[0;34m";    // BLUE
+    public static final String CYAN = "\033[0;36m";    // CYAN
+    public static final String RESET = "\033[0m";  // Text Reset
+
 
 
     public Show(String date, double price, int quantity, String name, String location) {

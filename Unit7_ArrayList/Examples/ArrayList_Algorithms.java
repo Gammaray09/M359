@@ -52,7 +52,12 @@ public class ArrayList_Algorithms {
         System.out.println("findAverage method on numsNoRepeats array: " + findAverage(numsNoRepeats));
         System.out.println("isIncreasing method on numsNoRepeats array: " + isIncreasing(numsNoRepeats));
         System.out.println("hasDuplicates method on names array: " + hasDuplicates(names));
+        System.out.println("revArrayList method on names array: " + revArrayList(names));
+        System.out.println(names);
+        shiftLeft(names);
+        System.out.println("shiftLeft method on names array: " + names);
     }
+
 
     /**
      * Finds the smallest value in the ArrayList
@@ -116,14 +121,12 @@ public class ArrayList_Algorithms {
      * @return true or false if increasing
      */
     public static boolean isIncreasing(ArrayList<Integer> list) {
-        boolean isIncreasing = true;
-        int curNum = list.get(0);
-        for (int i = 1; i < list.size()-1; i++) {
-            if(curNum+ 1 != list.get(i)){
-                isIncreasing = false;
+        for (int i = 0; i < list.size()-1; i++) {
+            if(list.get(i) > list.get(i + 1)){
+                return false;
             }
         }
-        return isIncreasing;
+        return true;
     }
 
     /**
@@ -133,15 +136,15 @@ public class ArrayList_Algorithms {
      * @return true if any values are repeated, false otherwise
      */
     public static boolean hasDuplicates(ArrayList<String> list) {
-        boolean duplicates = false;
-        String cur = list.get(0);
-        for (int i = 1; i < list.size(); i++) {
-            if(cur.equals(list.get(i))){
-                duplicates = true;
-                break;
+        for (int i = 0; i < list.size()-1; i++) {
+            for (int j = i + 1; j < list.size(); j++) {
+                if(list.get(i).equalsIgnoreCase(list.get(j))){
+                    return true;
+                }
             }
+
         }
-        return duplicates;
+        return false;
     }
 
     /**
@@ -150,9 +153,13 @@ public class ArrayList_Algorithms {
      * @param list
      * @return new ArrayList of Strings in reverse order
      */
-    //public static ArrayList<String> revArrayList(ArrayList<String> list) {
-
-    //}
+    public static ArrayList<String> revArrayList(ArrayList<String> list) {
+        ArrayList<String> newArr = new ArrayList<String>();
+        for (int i = list.size()-1; i >= 0; i--) {
+            newArr.add(list.get(i));
+        }
+        return newArr;
+    }
 
     /**
      * Shifts all values in list to the Left and the value at index 0 is moved
@@ -160,6 +167,10 @@ public class ArrayList_Algorithms {
      * @param list
      */
     public static void shiftLeft(ArrayList<String> list) {
+        String cur = list.get(list.size() -1);
+        for (int i = 0; i < list.size() ; i++) {
+            cur = list.set(i, cur);
+        }
 
     }
 

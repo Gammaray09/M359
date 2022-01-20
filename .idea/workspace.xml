@@ -4,9 +4,9 @@
     <list default="true" id="f6cded55-f257-4619-aec7-582a41f9c545" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Unit7_ArrayList/Examples/ArrayList_Algorithms.java" beforeDir="false" afterPath="$PROJECT_DIR$/Unit7_ArrayList/Examples/ArrayList_Algorithms.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unit7_ArrayList/Lab/Show.java" beforeDir="false" afterPath="$PROJECT_DIR$/Unit7_ArrayList/Lab/Show.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Unit7_ArrayList/Lab/TicketMaster.java" beforeDir="false" afterPath="$PROJECT_DIR$/Unit7_ArrayList/Lab/TicketMaster.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Unit7_ArrayList/Lab/TicketMasterDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/Unit7_ArrayList/Lab/TicketMasterDriver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/M359/.idea/runConfigurations.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/M359/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/M359/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/M359/Unit7_ArrayList/Lab/TicketMasterDriver.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/M359/Unit7_ArrayList/Lab/TicketMasterDriver.class" afterDir="false" />
     </list>
@@ -45,7 +45,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="project.propGUI" />
   </component>
   <component name="ReaderModeSettings">
     <option name="enabled" value="false" />
@@ -137,8 +137,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.TicketMasterDriver" />
-        <item itemvalue="Application.TriviaDriver" />
         <item itemvalue="Application.ArrayList_Algorithms" />
+        <item itemvalue="Application.TriviaDriver" />
         <item itemvalue="Application.TryCatch" />
         <item itemvalue="Application.Traversing_ArrayLists" />
       </list>
@@ -178,11 +178,11 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/M359$ChevyDriverStudent.ic" NAME="ChevyDriverStudent Coverage Results" MODIFIED="1632445960802" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>Unit3_Booleans_IfStatements.Homework.ChevroletLab.*</FILTER>
-    </SUITE>
     <SUITE FILE_PATH="coverage/M359$StudentTester.ic" NAME="StudentTester Coverage Results" MODIFIED="1632445124706" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>Unit3_Booleans_IfStatements.examples.Student.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/M359$ChevyDriverStudent.ic" NAME="ChevyDriverStudent Coverage Results" MODIFIED="1632445960802" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>Unit3_Booleans_IfStatements.Homework.ChevroletLab.*</FILTER>
     </SUITE>
   </component>
 </project>

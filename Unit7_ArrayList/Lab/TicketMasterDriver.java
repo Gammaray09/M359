@@ -5,6 +5,8 @@ import java.util.Scanner;
 
 public class TicketMasterDriver {
     public static final String RED_BRIGHT = "\033[0;91m";    // RED
+    public static final String GREEN_BRIGHT = "\033[0;92m";  // GREEN
+    public static final String BLUE = "\033[0;34m";    // BLUE
     public static final String RESET = "\033[0m";  // Text Reset
 
     public static void main(String[] args) throws FileNotFoundException {
@@ -20,16 +22,16 @@ public class TicketMasterDriver {
         // puts program into an infinite loop until user wants to quit
         while (true) {
             // Asks user to select sorting option
-            System.out.println("Type an Integer for 1-6 to select an option:");
-            System.out.println("\tSort By Performer(A-Z)[1]\tSort By Performer(Z-A)[2]\n\tSort By Price(L-H)[3]\t    " +
-                    "Sort By Price(H-L)[4]\n\tCity Search[5]\t\t\t\tQuit[6]");
+            System.out.println(GREEN_BRIGHT+ "Type an Integer for 1-6 to select an option:" +RESET);
+            System.out.println(BLUE + "\tSort By Performer(A-Z)[1]\tSort By Performer(Z-A)[2]\n\tSort By Price(L-H)[3]\t    " +
+                    "Sort By Price(H-L)[4]\n\tCity Search[5]\t\t\t\tQuit[6]" + RESET);
 
             boolean tryAgain = true;
             int userInput = 0;
             //while loop is not broken until user puts in valid input
             while (tryAgain) {
                 try {
-                    System.out.print("Select an option: ");
+                    System.out.print(GREEN_BRIGHT+ "Select an option: " + RESET);
                     userInput = input.nextInt();
                     // Throws error if input is greater than 6 and less than 1
                     if (userInput > 6 || userInput < 1) {
@@ -45,6 +47,22 @@ public class TicketMasterDriver {
                     System.out.println(RED_BRIGHT + "Invalid Input, Input an Integer from to 1-6" + RESET);
                     input.nextLine();
                 }
+            }
+
+            if (userInput == 1) {
+
+            }
+
+            if (userInput == 2) {
+
+            }
+
+            if (userInput == 3) {
+
+            }
+
+            if (userInput == 4) {
+
             }
 
             //if user select to sort by city

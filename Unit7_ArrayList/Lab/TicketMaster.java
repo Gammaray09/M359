@@ -1,7 +1,5 @@
 package Unit7_ArrayList.Lab;
 
-import Unit6_Arrays.Homework.Trivia.Question;
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
