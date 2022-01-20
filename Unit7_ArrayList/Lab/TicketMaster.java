@@ -45,6 +45,13 @@ public class TicketMaster {
         System.out.println(GREEN + "-------------------------------------------------------------"+ RESET );
     }
 
+    public void lowToHighPrice(){
+
+    }
+
+    public void highToLowPrice(){
+
+    }
 
     public void searchCity(String city){
         city = city.toLowerCase();

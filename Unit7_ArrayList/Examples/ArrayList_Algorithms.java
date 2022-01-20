@@ -50,6 +50,8 @@ public class ArrayList_Algorithms {
         System.out.println("findMax method on numsNoRepeats array: " + findMax(numsNoRepeats));
         System.out.println("findSum method on numsNoRepeats array: " + findSum(numsNoRepeats));
         System.out.println("findAverage method on numsNoRepeats array: " + findAverage(numsNoRepeats));
+        System.out.println("isIncreasing method on numsNoRepeats array: " + isIncreasing(numsNoRepeats));
+        System.out.println("hasDuplicates method on names array: " + hasDuplicates(names));
     }
 
     /**
@@ -114,11 +116,14 @@ public class ArrayList_Algorithms {
      * @return true or false if increasing
      */
     public static boolean isIncreasing(ArrayList<Integer> list) {
-        boolean increasing = false;
+        boolean isIncreasing = true;
         int curNum = list.get(0);
-        //for(for (int i = 1; i < list.size(); i++) {
-        //}
-        return increasing;
+        for (int i = 1; i < list.size()-1; i++) {
+            if(curNum+ 1 != list.get(i)){
+                isIncreasing = false;
+            }
+        }
+        return isIncreasing;
     }
 
     /**
@@ -128,7 +133,15 @@ public class ArrayList_Algorithms {
      * @return true if any values are repeated, false otherwise
      */
     public static boolean hasDuplicates(ArrayList<String> list) {
-        return true;
+        boolean duplicates = false;
+        String cur = list.get(0);
+        for (int i = 1; i < list.size(); i++) {
+            if(cur.equals(list.get(i))){
+                duplicates = true;
+                break;
+            }
+        }
+        return duplicates;
     }
 
     /**
