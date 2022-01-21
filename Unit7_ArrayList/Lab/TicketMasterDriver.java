@@ -58,11 +58,11 @@ public class TicketMasterDriver {
             }
 
             if (userInput == 3) {
-
+                Tickets.lowToHighPrice();
             }
 
             if (userInput == 4) {
-
+                Tickets.highToLowPrice();
             }
 
             //if user select to sort by city
