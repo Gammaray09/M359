@@ -58,19 +58,16 @@ public class TicketMaster {
         printData();
     }
 
+    //insertion sort
     public void highToLowPrice(){
-        for (int i = 0; i < showsList.size()-1; i++) {
-            int maxIndex = i;
-            for (int j = i + 1; j < showsList.size(); j++) {
-                if(showsList.get(j).getPrice() > showsList.get(maxIndex).getPrice()){
-                    maxIndex = j;
-                }
-            }
-            Show maxIndexObj = showsList.get(maxIndex);
-            showsList.set(maxIndex, showsList.get(i));
-            showsList.set(i, maxIndexObj);
+        for (int i = 1; i < showsList.size()-1; i++) {
+            double temp = showsList.get(i).getPrice();
+            int curIndex = i;
+
+           while (curIndex > 0 && showsList.get(curIndex -1).getPrice() > temp){
+           }
         }
-        printData();
+
     }
 
     public void searchCity(String city){
