@@ -56,6 +56,9 @@ public class ArrayList_Algorithms {
         System.out.println(names);
         shiftLeft(names);
         System.out.println("shiftLeft method on names array: " + names);
+        System.out.println();
+        System.out.println();
+
     }
 
 
@@ -173,5 +176,6 @@ public class ArrayList_Algorithms {
         }
 
     }
+
 
 }

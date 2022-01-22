@@ -44,10 +44,31 @@ public class TicketMaster {
     }
 
     public void lowToHighPrice(){
+        for (int i = 1; i <showsList.size(); i++) {
+            double temp = showsList.get(i).getPrice();
+            int curIndex = i -1;
+            double curPrice = showsList.get(curIndex).getPrice();
+            while (curIndex > 0 && curPrice > temp){
+                showsList.set(curIndex+1, showsList.get(curIndex));
+                curIndex--;
+            }
+            showsList.set(curIndex+1, showsList.get(i));
+        }
+        printData();
+    }
+
+    public void highToLowPrice(){
+
+
+    }
+
+
+
+    public void performerSortAZ(){
         for (int i = 0; i < showsList.size()-1; i++) {
             int minIndex = i;
             for (int j = i + 1; j < showsList.size(); j++) {
-                if(showsList.get(j).getPrice() < showsList.get(minIndex).getPrice()){
+                if(showsList.get(j).getName().compareToIgnoreCase(showsList.get(minIndex).getName()) < 0){
                     minIndex = j;
                 }
             }
@@ -58,17 +79,17 @@ public class TicketMaster {
         printData();
     }
 
-    public void highToLowPrice(){
+    public void performerSortZA(){
         for (int i = 0; i < showsList.size()-1; i++) {
-            int maxIndex = i;
+            int minIndex = i;
             for (int j = i + 1; j < showsList.size(); j++) {
-                if(showsList.get(j).getPrice() > showsList.get(maxIndex).getPrice()){
-                    maxIndex = j;
+                if(showsList.get(j).getName().compareToIgnoreCase(showsList.get(minIndex).getName()) > 0){
+                    minIndex = j;
                 }
             }
-            Show maxIndexObj = showsList.get(maxIndex);
-            showsList.set(maxIndex, showsList.get(i));
-            showsList.set(i, maxIndexObj);
+            Show minIndexObj = showsList.get(minIndex);
+            showsList.set(minIndex, showsList.get(i));
+            showsList.set(i, minIndexObj);
         }
         printData();
     }

@@ -23,7 +23,7 @@ public class TicketMasterDriver {
         while (true) {
             // Asks user to select sorting option
             System.out.println(GREEN_BRIGHT+ "Type an Integer for 1-6 to select an option:" +RESET);
-            System.out.println(BLUE + "\tSort By Performer(A-Z)[1]\tSort By Performer(Z-A)[2]\n\tSort By Price(L-H)[3]\t    " +
+            System.out.println(BLUE + "\tSort By Performer(A-Z)[1]\tSort By Performer(Z-A)[2]\n\tSort By Price(L-H)[3]\t\t" +
                     "Sort By Price(H-L)[4]\n\tCity Search[5]\t\t\t\tQuit[6]" + RESET);
 
             boolean tryAgain = true;
@@ -50,11 +50,11 @@ public class TicketMasterDriver {
             }
 
             if (userInput == 1) {
-
+                Tickets.performerSortAZ();
             }
 
             if (userInput == 2) {
-
+                Tickets.performerSortZA();
             }
 
             if (userInput == 3) {
