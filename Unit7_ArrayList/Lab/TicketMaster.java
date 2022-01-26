@@ -46,21 +46,30 @@ public class TicketMaster {
     public void lowToHighPrice(){
         for (int i = 1; i < showsList.size(); i++) {
             Show temp = showsList.get(i);
-            int position = i - 1;
-            while (position >= 0){
-                if(showsList.get(i).getPrice() > temp.getPrice()){
-                    showsList.set(i, showsList.get(position));
-                    showsList.set(position, temp);
-                }
+            int position = i;
+            while (position > 0 && (showsList.get(position-1).getPrice() > temp.getPrice())){
+                showsList.set(position, showsList.get(position-1));
+
                 position -= 1;
             }
+            showsList.set(position,temp);
         }
         printData();
     }
 
     public void highToLowPrice(){
 
+        for (int i = 1; i < showsList.size(); i++) {
+            Show temp = showsList.get(i);
+            int position = i;
+            while (position > 0 && (showsList.get(position-1).getPrice() < temp.getPrice())){
+                showsList.set(position, showsList.get(position-1));
 
+                position -= 1;
+            }
+            showsList.set(position,temp);
+        }
+        printData();
     }
 
 
