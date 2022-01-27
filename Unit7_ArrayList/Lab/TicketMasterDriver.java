@@ -4,11 +4,19 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class TicketMasterDriver {
-    public static final String RED_BRIGHT = "\033[0;91m";    // RED
-    public static final String GREEN_BRIGHT = "\033[0;92m";  // GREEN
-    public static final String BLUE = "\033[0;34m";    // BLUE
-    public static final String RESET = "\033[0m";  // Text Reset
-    public static final String BOXING = "\033[0;51m";   // BLACK
+    private static final String RED_BRIGHT = "\033[0;91m";    // RED
+    private static final String GREEN_BRIGHT = "\033[0;92m";  // GREEN
+
+    private static final String BLUE = "\033[0;34m";    // BLUE
+    private static final String RESET = "\033[0m";  // Text Reset
+    private static final String BOXING = "\033[0;51m";   // BLACK
+
+    private static final int AZSort = 1;
+    private static final int ZASort = 2;
+    private static final int HLSort = 3;
+    private static final int LHSort = 4;
+    private static final int CITYSEARCH = 5;
+    private static final int QUIT = 6;
 
     public static void main(String[] args) throws FileNotFoundException {
         //Creates TicketMaster and Scanner object
@@ -23,9 +31,7 @@ public class TicketMasterDriver {
         // puts program into an infinite loop until user wants to quit
         while (true) {
             // Asks user to select sorting option
-            System.out.println(GREEN_BRIGHT+ "Type an Integer for 1-6 to select an option:" +RESET);
-            System.out.println(BLUE + "\tSort By Performer(A-Z)[1]\tSort By Performer(Z-A)[2]\n\tSort By Price(L-H)[3]\t\t" +
-                    "Sort By Price(H-L)[4]\n\tCity Search[5]\t\t\t\tQuit[6]" + RESET);
+            Tickets.printMenu();
 
             boolean tryAgain = true;
             int userInput = 0;
@@ -50,36 +56,37 @@ public class TicketMasterDriver {
                 }
             }
 
-            if (userInput == 1) {
+            if (userInput == AZSort) {
                 long nano_startTime = System.nanoTime();
                 Tickets.performerSortAZ();
                 long nano_endTime = System.nanoTime();
-                System.out.println(BOXING +" Time taken to sort: " + (nano_endTime - nano_startTime)+" nano seconds"+ RESET);
+                System.out.println(BOXING +" Time taken to sort: " + (nano_endTime - nano_startTime)+" nanoseconds"+ RESET);
+
             }
 
-            if (userInput == 2) {
+            if (userInput == ZASort) {
                 long nano_startTime = System.nanoTime();
                 Tickets.performerSortZA();
                 long nano_endTime = System.nanoTime();
-                System.out.println(BOXING +" Time taken to sort: " + (nano_endTime - nano_startTime)+" nano seconds"+ RESET);
+                System.out.println(BOXING +" Time taken to sort: " + (nano_endTime - nano_startTime)+" nanoseconds"+ RESET);
             }
 
-            if (userInput == 3) {
+            if (userInput == LHSort) {
                 long nano_startTime = System.nanoTime();
                 Tickets.lowToHighPrice();
                 long nano_endTime = System.nanoTime();
-                System.out.println(BOXING +" Time taken to sort: " + (nano_endTime - nano_startTime) +" nano seconds"+ RESET);
+                System.out.println(BOXING +" Time taken to sort: " + (nano_endTime - nano_startTime) +" nanoseconds"+ RESET);
             }
 
-            if (userInput == 4) {
+            if (userInput == HLSort) {
                 long nano_startTime = System.nanoTime();
                 Tickets.highToLowPrice();
                 long nano_endTime = System.nanoTime();
-                System.out.println(BOXING +" Time taken to sort: " + (nano_endTime - nano_startTime)+" nano seconds"+ RESET);
+                System.out.println(BOXING +" Time taken to sort: " + (nano_endTime - nano_startTime)+" nanoseconds"+ RESET);
             }
 
             //if user select to sort by city
-            if (userInput == 5) {
+            if (userInput == CITYSEARCH ) {
                 tryAgain = true;
                 String cityInput = "";
                 while (tryAgain) {
@@ -95,11 +102,11 @@ public class TicketMasterDriver {
                 long nano_startTime = System.nanoTime();
                 Tickets.searchCity(cityInput);
                 long nano_endTime = System.nanoTime();
-                System.out.println(BOXING + " Time taken to sort: " + (nano_endTime - nano_startTime)+" nano seconds"+ RESET);
+                System.out.println(BOXING + " Time taken to sort: " + (nano_endTime - nano_startTime)+" nanoseconds"+ RESET);
             }
 
             // if user selects to quit
-            if(userInput == 6){
+            if(userInput == QUIT){
                 System.out.println("Thanks for using TicketMaster!");
                 break;
             }

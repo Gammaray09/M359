@@ -6,8 +6,12 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class TicketMaster {
+    // constant variable for colors
     public static final String GREEN = "\033[0;32m";   // GREEN
     public static final String RESET = "\033[0m";  // Text Reset
+    private static final String RED_BRIGHT = "\033[0;91m";    // RED
+    private static final String GREEN_BRIGHT = "\033[0;92m";  // GREEN
+    public static final String BLUE = "\033[0;34m";    // BLUE
 
     private ArrayList<Show> showsList;
 
@@ -16,7 +20,6 @@ public class TicketMaster {
     }
 
     public void fileRead(String filename) throws FileNotFoundException {
-
         File myFile = new File(filename);
         Scanner fileIn = new Scanner(myFile);
 
@@ -103,15 +106,44 @@ public class TicketMaster {
         printData();
     }
 
+    /**
+     * This function takes in a string and iterates through the array twice
+     * The first time is checks if the string is located as a city in the array
+     * If the string exist then the function iterates through the array again and
+     * prints out the objects that contain that string as a city.
+     * If the string does not exist the program prints out that it did not find the city
+     * @param city
+     */
     public void searchCity(String city){
+        int count = 0;
         city = city.toLowerCase();
         System.out.println(GREEN + "Date\t\tPrice\t\tQty\t\t Performer\t\t\tCity");
         System.out.println("-------------------------------------------------------------" + RESET);
         for(Show s: showsList) {
             if (s.getLocation().toLowerCase().equals(city)){
-                System.out.println(s);
+                count++;
             }
         }
+        if(count > 0){
+            for(Show s: showsList) {
+                if (s.getLocation().toLowerCase().equals(city)){
+                    System.out.println(s);
+                }
+            }
+        }else{
+            System.out.println(RED_BRIGHT+"\t\t\t\t\t**No Cities Found**");
+        }
         System.out.println(GREEN + "-------------------------------------------------------------"+ RESET );
+    }
+
+
+    /**
+     * This function prints out menu in clean format so
+     * user can select an option
+     */
+    public void printMenu(){
+        System.out.println(GREEN_BRIGHT+ "Type an Integer for 1-6 to select an option:" +RESET);
+        System.out.println(BLUE + "\tSort By Performer(A-Z)[1]\tSort By Performer(Z-A)[2]\n\tSort By Price(L-H)[3]\t\t" +
+                "Sort By Price(H-L)[4]\n\tCity Search[5]\t\t\t\tQuit[6]" + RESET);
     }
 }
