@@ -49,7 +49,6 @@ public class TicketMaster {
             int position = i;
             while (position > 0 && (showsList.get(position-1).getPrice() > temp.getPrice())){
                 showsList.set(position, showsList.get(position-1));
-
                 position -= 1;
             }
             showsList.set(position,temp);

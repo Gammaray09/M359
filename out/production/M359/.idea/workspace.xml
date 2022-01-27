@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f6cded55-f257-4619-aec7-582a41f9c545" name="Default Changelist" comment="" />
+    <list default="true" id="f6cded55-f257-4619-aec7-582a41f9c545" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unit7_ArrayList/Lab/TicketMaster.java" beforeDir="false" afterPath="$PROJECT_DIR$/Unit7_ArrayList/Lab/TicketMaster.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -56,12 +59,12 @@
     </key>
   </component>
   <component name="RunManager" selected="Application.TicketMasterDriver">
-    <configuration name="Basketball_Tester" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Unit5_WritingClasses.examples.basketball.Basketball_Tester" />
+    <configuration name="InsertionSort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Unit7_ArrayList.Examples.InsertionSort" />
       <module name="M359" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Unit5_WritingClasses.examples.basketball.*" />
+          <option name="PATTERN" value="Unit7_ArrayList.Examples.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -69,12 +72,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PigLatinTester" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Unit4_loops.examples.PigLatinLab.PigLatinTester" />
+    <configuration name="SelectionSort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Unit7_ArrayList.Examples.SelectionSort" />
       <module name="M359" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Unit4_loops.examples.PigLatinLab.*" />
+          <option name="PATTERN" value="Unit7_ArrayList.Examples.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -123,18 +126,18 @@
     </configuration>
     <list>
       <item itemvalue="Application.TicketMasterDriver" />
-      <item itemvalue="Application.PigLatinTester" />
-      <item itemvalue="Application.Basketball_Tester" />
       <item itemvalue="Application.TriviaDriver" />
       <item itemvalue="Application.StoreTester" />
+      <item itemvalue="Application.SelectionSort" />
+      <item itemvalue="Application.InsertionSort" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.TicketMasterDriver" />
+        <item itemvalue="Application.InsertionSort" />
+        <item itemvalue="Application.SelectionSort" />
         <item itemvalue="Application.StoreTester" />
         <item itemvalue="Application.TriviaDriver" />
-        <item itemvalue="Application.Basketball_Tester" />
-        <item itemvalue="Application.PigLatinTester" />
       </list>
     </recent_temporary>
   </component>
@@ -177,11 +180,11 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/M359$StudentTester.ic" NAME="StudentTester Coverage Results" MODIFIED="1632445124706" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>Unit3_Booleans_IfStatements.examples.Student.*</FILTER>
-    </SUITE>
     <SUITE FILE_PATH="coverage/M359$ChevyDriverStudent.ic" NAME="ChevyDriverStudent Coverage Results" MODIFIED="1632445960802" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>Unit3_Booleans_IfStatements.Homework.ChevroletLab.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/M359$StudentTester.ic" NAME="StudentTester Coverage Results" MODIFIED="1632445124706" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>Unit3_Booleans_IfStatements.examples.Student.*</FILTER>
     </SUITE>
   </component>
 </project>
