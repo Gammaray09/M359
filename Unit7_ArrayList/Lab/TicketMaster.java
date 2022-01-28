@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class TicketMaster {
+
     // constant variable for colors
     public static final String GREEN = "\033[0;32m";   // GREEN
     public static final String RESET = "\033[0m";  // Text Reset
@@ -15,8 +16,9 @@ public class TicketMaster {
 
     private ArrayList<Show> showsList;
 
+    //instantiates the showList arr
     public TicketMaster() {
-        showsList = new ArrayList<Show>();;
+        showsList = new ArrayList<Show>();
     }
 
     public void fileRead(String filename) throws FileNotFoundException {
@@ -25,7 +27,7 @@ public class TicketMaster {
 
         while (fileIn.hasNextLine()){
             String date = fileIn.next();
-            double price = fileIn.nextDouble();;
+            double price = fileIn.nextDouble();
             int quantity = fileIn.nextInt();
             String temp = fileIn.nextLine();
             String name = temp.substring(0, temp.indexOf(","));
@@ -36,7 +38,27 @@ public class TicketMaster {
         }
     }
 
+    /**
+     * This function prints out a header the iterates through the array
+     * printing out each object
+00000000
 
+
+
+
+
+
+
+     
+
+
+
+
+
+
+
+
+     */
     public void printData(){
         System.out.println(GREEN + "Date\t\tPrice\t\tQty\t\t Performer\t\t\tCity");
         System.out.println("-------------------------------------------------------------" + RESET);
@@ -112,7 +134,8 @@ public class TicketMaster {
      * If the string exist then the function iterates through the array again and
      * prints out the objects that contain that string as a city.
      * If the string does not exist the program prints out that it did not find the city
-     * @param city
+     *
+     * @param city a string of what city the user is looking for
      */
     public void searchCity(String city){
         int count = 0;
