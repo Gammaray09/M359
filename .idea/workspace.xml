@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f6cded55-f257-4619-aec7-582a41f9c545" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Unit7_ArrayList/Lab/TicketMaster.java" beforeDir="false" afterPath="$PROJECT_DIR$/Unit7_ArrayList/Lab/TicketMaster.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Unit7_ArrayList/Lab/TicketMasterDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/Unit7_ArrayList/Lab/TicketMasterDriver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/M359/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/M359/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/M359/Unit7_ArrayList/Lab/TicketMaster.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/M359/Unit7_ArrayList/Lab/TicketMaster.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
