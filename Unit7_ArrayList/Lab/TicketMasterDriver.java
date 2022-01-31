@@ -4,13 +4,13 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class TicketMasterDriver {
+    // static variables for text colors
     private static final String RED_BRIGHT = "\033[0;91m";    // RED
     private static final String GREEN_BRIGHT = "\033[0;92m";  // GREEN
-
-    private static final String BLUE = "\033[0;34m";    // BLUE
     private static final String RESET = "\033[0m";  // Text Reset
     private static final String BOXING = "\033[0;51m";   // BLACK
 
+    //static variables for what method needs to be called
     private static final int AZSort = 1;
     private static final int ZASort = 2;
     private static final int HLSort = 3;
@@ -56,14 +56,18 @@ public class TicketMasterDriver {
                 }
             }
 
+            // if user types 1 to sort by name A-Z
             if (userInput == AZSort) {
+                //gets nano second time
                 long nano_startTime = System.nanoTime();
                 Tickets.performerSortAZ();
                 long nano_endTime = System.nanoTime();
+                // prints out time taken to process
                 System.out.println(BOXING +" Time taken to sort: " + (nano_endTime - nano_startTime)+" nanoseconds"+ RESET);
 
             }
 
+            // if user types 2 to sort by name Z-A
             if (userInput == ZASort) {
                 long nano_startTime = System.nanoTime();
                 Tickets.performerSortZA();
@@ -71,6 +75,7 @@ public class TicketMasterDriver {
                 System.out.println(BOXING +" Time taken to sort: " + (nano_endTime - nano_startTime)+" nanoseconds"+ RESET);
             }
 
+            // if user types 3 to sort by price low to high
             if (userInput == LHSort) {
                 long nano_startTime = System.nanoTime();
                 Tickets.lowToHighPrice();
@@ -78,6 +83,7 @@ public class TicketMasterDriver {
                 System.out.println(BOXING +" Time taken to sort: " + (nano_endTime - nano_startTime) +" nanoseconds"+ RESET);
             }
 
+            // if user types 4 to sort by price high to low
             if (userInput == HLSort) {
                 long nano_startTime = System.nanoTime();
                 Tickets.highToLowPrice();
@@ -85,7 +91,7 @@ public class TicketMasterDriver {
                 System.out.println(BOXING +" Time taken to sort: " + (nano_endTime - nano_startTime)+" nanoseconds"+ RESET);
             }
 
-            //if user select to sort by city
+            //if user selects 5 to sort by city
             if (userInput == CITYSEARCH ) {
                 tryAgain = true;
                 String cityInput = "";
@@ -105,7 +111,7 @@ public class TicketMasterDriver {
                 System.out.println(BOXING + " Time taken to sort: " + (nano_endTime - nano_startTime)+" nanoseconds"+ RESET);
             }
 
-            // if user selects to quit
+            // if user selects 6 to quit
             if(userInput == QUIT){
                 System.out.println("Thanks for using TicketMaster!");
                 break;

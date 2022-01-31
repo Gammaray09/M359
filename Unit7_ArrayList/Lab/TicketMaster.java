@@ -1,12 +1,12 @@
 package Unit7_ArrayList.Lab;
 
+//imports
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class TicketMaster {
-
     // constant variable for colors
     public static final String GREEN = "\033[0;32m";   // GREEN
     public static final String RESET = "\033[0m";  // Text Reset
@@ -14,6 +14,7 @@ public class TicketMaster {
     private static final String GREEN_BRIGHT = "\033[0;92m";  // GREEN
     public static final String BLUE = "\033[0;34m";    // BLUE
 
+    // privates variable for an array list where objects will be stored
     private ArrayList<Show> showsList;
 
     //instantiates the showList arr
@@ -21,6 +22,15 @@ public class TicketMaster {
         showsList = new ArrayList<Show>();
     }
 
+    /**
+     * This method reads the file that was passed in and uses the data in
+     * the file to create show objects
+     *
+     * Then the method adds the objects into an array list
+     *
+     * @param filename name of the file that needs to be read
+     * @throws FileNotFoundException
+     */
     public void fileRead(String filename) throws FileNotFoundException {
         File myFile = new File(filename);
         Scanner fileIn = new Scanner(myFile);
@@ -39,25 +49,8 @@ public class TicketMaster {
     }
 
     /**
-     * This function prints out a header the iterates through the array
+     * This function prints out a header and iterates through the array
      * printing out each object
-00000000
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
      */
     public void printData(){
         System.out.println(GREEN + "Date\t\tPrice\t\tQty\t\t Performer\t\t\tCity");
@@ -68,6 +61,10 @@ public class TicketMaster {
         System.out.println(GREEN + "-------------------------------------------------------------"+ RESET );
     }
 
+    /**
+     * This method uses insertion sort algorithm to sort the shows in numerical
+     * order using the price from lowest to highest
+     */
     public void lowToHighPrice(){
         for (int i = 1; i < showsList.size(); i++) {
             Show temp = showsList.get(i);
@@ -81,6 +78,10 @@ public class TicketMaster {
         printData();
     }
 
+    /**
+     * This method uses insertion sort algorithm to sort the shows in numerical
+     * order using the price from highest to lowest
+     */
     public void highToLowPrice(){
 
         for (int i = 1; i < showsList.size(); i++) {
@@ -97,7 +98,10 @@ public class TicketMaster {
     }
 
 
-
+    /**
+     * This method uses selection sort algorithm to sort the shows in alphabetical
+     * order using the singers name
+     */
     public void performerSortAZ(){
         for (int i = 0; i < showsList.size()-1; i++) {
             int minIndex = i;
@@ -113,6 +117,10 @@ public class TicketMaster {
         printData();
     }
 
+    /**
+     * This method uses selection sort algorithm to sort the shows in reverse alphabetical
+     * order using the singers name
+     */
     public void performerSortZA(){
         for (int i = 0; i < showsList.size()-1; i++) {
             int minIndex = i;
