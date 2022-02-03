@@ -17,6 +17,7 @@ public class TicketMaster {
     // privates variable for an array list where objects will be stored
     private ArrayList<Show> showsList;
 
+    ArrayList<Integer> a = new ArrayList<>();
     //instantiates the showList arr
     public TicketMaster() {
         showsList = new ArrayList<Show>();
