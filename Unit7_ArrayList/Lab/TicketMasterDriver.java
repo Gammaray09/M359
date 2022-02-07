@@ -45,6 +45,9 @@ public class TicketMasterDriver {
                         throw new ArrayIndexOutOfBoundsException();
                     }
                     tryAgain = false;
+                    // dummy read
+                    input.nextLine();
+
                     // input is out of bounds
                 } catch (ArrayIndexOutOfBoundsException e) {
                     System.out.println(RED_BRIGHT + "Input out of Bounds, Input an Integer from to 1-6" + RESET);
@@ -98,7 +101,7 @@ public class TicketMasterDriver {
                 while (tryAgain) {
                     try {
                         System.out.print("What city are you looking for: ");
-                        cityInput = input.next();
+                        cityInput = input.nextLine();
                         tryAgain = false;
                     } catch (Exception e) {
                         System.out.println(RED_BRIGHT + "Invalid Input, Input a valid city" + RESET);
@@ -106,7 +109,7 @@ public class TicketMasterDriver {
                     }
                 }
                 long nano_startTime = System.nanoTime();
-                Tickets.searchCity(cityInput);
+                Tickets.searchCity(cityInput.toLowerCase());
                 long nano_endTime = System.nanoTime();
                 System.out.println(BOXING + " Time taken to sort: " + (nano_endTime - nano_startTime)+" nanoseconds"+ RESET);
             }

@@ -148,17 +148,17 @@ public class TicketMaster {
      */
     public void searchCity(String city){
         int count = 0;
-        city = city.toLowerCase();
+        System.out.println(city);
         System.out.println(GREEN + "Date\t\tPrice\t\tQty\t\t Performer\t\t\tCity");
         System.out.println("-------------------------------------------------------------" + RESET);
         for(Show s: showsList) {
-            if (s.getLocation().toLowerCase().equals(city)){
+            if (s.getLocation().equalsIgnoreCase(city)){
                 count++;
             }
         }
         if(count > 0){
             for(Show s: showsList) {
-                if (s.getLocation().toLowerCase().equals(city)){
+                if (s.getLocation().equalsIgnoreCase(city)){
                     System.out.println(s);
                 }
             }
