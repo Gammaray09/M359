@@ -39,7 +39,8 @@ public class Show {
     /**
      * This method prints out objects in a neat way that is
      * allinged with the header
-     * @return
+     *
+     * @return returns all data of one show object
      */
     public String toString() {
         String newWord = name;
