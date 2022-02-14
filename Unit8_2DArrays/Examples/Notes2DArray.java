@@ -1,4 +1,4 @@
-package Unit8_2DArrays;
+package Unit8_2DArrays.Examples;
 
 public class Notes2DArray {
     public static void main(String[] args) {
