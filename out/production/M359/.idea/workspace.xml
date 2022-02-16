@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f6cded55-f257-4619-aec7-582a41f9c545" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Unit8_2DArrays/Examples/DumbDenna_8_2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Unit8_2DArrays/Examples/MethodWritingPractice.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Unit8_2DArrays/Notes2DArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/Unit8_2DArrays/Examples/Notes2DArray.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +59,7 @@
       <recent name="C:\Users\aashm\OneDrive\Documents\GitHub\M359" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.DumbDenna_8_2">
+  <component name="RunManager" selected="Application.MethodWritingPractice">
     <configuration name="DumbDenna_8_2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Unit8_2DArrays.Examples.DumbDenna_8_2" />
       <module name="M359" />
@@ -74,12 +73,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="InsertionSort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Unit7_ArrayList.Examples.InsertionSort" />
+    <configuration name="MethodWritingPractice" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Unit8_2DArrays.Examples.MethodWritingPractice" />
       <module name="M359" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Unit7_ArrayList.Examples.*" />
+          <option name="PATTERN" value="Unit8_2DArrays.Examples.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -128,18 +127,18 @@
     </configuration>
     <list>
       <item itemvalue="Application.TicketMasterDriver" />
-      <item itemvalue="Application.InsertionSort" />
       <item itemvalue="Application.hwtest" />
       <item itemvalue="Application.Notes2DArray" />
       <item itemvalue="Application.DumbDenna_8_2" />
+      <item itemvalue="Application.MethodWritingPractice" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MethodWritingPractice" />
         <item itemvalue="Application.DumbDenna_8_2" />
         <item itemvalue="Application.Notes2DArray" />
         <item itemvalue="Application.TicketMasterDriver" />
         <item itemvalue="Application.hwtest" />
-        <item itemvalue="Application.InsertionSort" />
       </list>
     </recent_temporary>
   </component>
