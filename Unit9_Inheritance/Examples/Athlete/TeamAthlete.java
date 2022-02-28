@@ -1,4 +1,4 @@
-package Unit9_Inheritance.Example.Athlete;
+package Unit9_Inheritance.Examples.Athlete;
 
 public class TeamAthlete extends Athlete{
     private String teamName;

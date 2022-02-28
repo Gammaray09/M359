@@ -1,4 +1,4 @@
-package Unit9_Inheritance.Example.Notes_9_2;
+package Unit9_Inheritance.Examples.Notes_9_2;
 
 public class Entree extends MenuItem{
     private int numSides;
