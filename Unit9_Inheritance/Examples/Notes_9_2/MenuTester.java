@@ -9,5 +9,10 @@ public class MenuTester {
         Drink d = new Drink("Pepsi Zero", 24);
         System.out.println();
         Drink d2 = new Drink("Milkshake", 16, true);
+
+
+        System.out.println(m);
+        System.out.println(e);
+        System.out.println(d);
     }
 }

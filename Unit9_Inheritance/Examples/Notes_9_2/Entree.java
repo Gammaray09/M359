@@ -7,4 +7,10 @@ public class Entree extends MenuItem{
         this.numSides = numSides;
         System.out.println("Created an Entree with " + numSides + " sides");
     }
+
+    @Override
+    public String toString() {
+        return "Menu Item: "+ super.getName()+
+                " (Num Sides: " + this.numSides+")";
+    }
 }

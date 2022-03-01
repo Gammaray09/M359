@@ -11,4 +11,12 @@ public class MenuItem {
         this.name = name;
         System.out.println("Created a MenuItem called " + name);
     }
+
+    @Override
+    public String toString(){
+        String ouput = "Menu Item: " + this.name;
+        return ouput;
+    }
+
+    public String getName() { return name; }
 }
