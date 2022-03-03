@@ -5,14 +5,18 @@ public class Shape {
     private String color;
 
 
-    public Shape() {
-        this.name = "No Name Given";
-        this.color = "No Color Given";
-    }
-
     public Shape(String name, String color) {
         this.name = name;
         this.color = color;
-        
     }
+
+
+
+
+    public String getName() { return name; }
+    public String getColor() { return color; }
+
+    public void setName(String name) { this.name = name; }
+    public void setColor(String color) { this.color = color; }
+
 }
