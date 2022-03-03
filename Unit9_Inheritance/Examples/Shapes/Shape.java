@@ -13,5 +13,6 @@ public class Shape {
     public Shape(String name, String color) {
         this.name = name;
         this.color = color;
+        
     }
 }
