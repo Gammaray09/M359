@@ -1,0 +1,86 @@
+package Unit9_Inheritance.Lab;
+
+public class WorkoutPlan {
+    private Workout[][] workouts;
+    private int workoutsCompleted;
+    private int workoutsSkipped;
+    private int nextWorkoutNum;
+    private int totalCals;
+    private int totalMins;
+
+    int CARDIO = 1;
+    int STRENGTH = 2;
+    int WELLNESS = 3;
+
+    public WorkoutPlan(int weeks) {
+        this.workouts = new Workout[weeks][7];
+        this.workoutsCompleted = 0;
+        this.workoutsSkipped = 0;
+        this.nextWorkoutNum = 0;
+        this.totalCals = 0;
+        this.totalMins = 0;
+    }
+    
+    
+    private void createPlan(){
+        for (int row = 0; row < workouts.length; row++) {
+            for (int col = 0; col < workouts[0].length; col++) {
+                int random = (int)(Math.random() * 2) + 1;
+                if(random == CARDIO){
+                    workouts[row][col] = createCardio();
+                }
+                if(random == STRENGTH){
+                    workouts[row][col] = createStrength();
+                }
+                if(random == WELLNESS){
+                    workouts[row][col] = createWellness();
+                }
+                this.nextWorkoutNum++;
+            }
+        }
+    }
+
+
+    private Cardio createCardio(){
+        int time = (int)(Math.random() * 30) + 10;
+        int speed = (int)(Math.random() * 6) + 1;
+        return new Cardio(this.nextWorkoutNum,time,speed);
+    }
+
+
+    private Strength createStrength(){
+        int time = (int)(Math.random() * 45) + 15;
+        int weight = (int)(Math.random() * 130) + 95;
+        return new Strength(this.nextWorkoutNum,time,weight);
+    }
+
+    private Wellness createWellness(){
+        int time = (int)(Math.random() * 30) + 30;
+        int stretches = (int)(Math.random() * 4) + 8;
+        return new Wellness(this.nextWorkoutNum,time,stretches);
+    }
+
+
+    public String toString() {
+        String output = "*** CURRENT PROGRESS ***\n";
+        output += "Number of workouts completed:\t" + this.workoutsCompleted + "\n";
+        output += "Number of workouts skipped:\t" + this.workoutsSkipped + "\n";
+        output += "Total minutes of exercise:\t" + this.totalMins + "\n";
+        output += "Total calories burned:\t" + this.totalCals + "\n";
+        return output;
+    }
+
+
+    public void printProgress() {
+        String output = "*** CURRENT PROGRESS ***\n";
+        output += "Number of workouts completed:\t" + this.workoutsCompleted + "\n";
+        output += "Number of workouts skipped:\t" + this.workoutsSkipped + "\n";
+        output += "Total minutes of exercise:\t" + this.totalMins + "\n";
+        output += "Total calories burned:\t" + this.totalCals + "\n";
+        System.out.println(output);
+    }
+
+    public void workoutNextWeek(){
+        
+    }
+}
