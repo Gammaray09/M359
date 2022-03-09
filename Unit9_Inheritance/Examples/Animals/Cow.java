@@ -19,4 +19,9 @@ public class Cow extends Animal
         System.out.println("The "+ cowType + " Cow " + getName() + " says MOOOOO.");
     }
 
+
+    public void milk(){
+        System.out.println("Cow is producing milf for farm.");
+    }
+
 }

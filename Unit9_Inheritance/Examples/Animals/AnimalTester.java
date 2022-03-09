@@ -30,6 +30,10 @@ public class AnimalTester
             // 3. What method is getting called here?  The speak method of the Animal class?
 
        // 4. Try to summarize in 2-3 sentences WHAT you observed in this code.
+
+       Animal myAnimal = new Cow("Barbara", "Space");
+       Cow coolCow = (Cow) myAnimal;
+       ((Cow) myAnimal).milk();
    }
    
 }

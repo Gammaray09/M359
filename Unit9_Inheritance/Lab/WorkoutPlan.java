@@ -2,6 +2,7 @@ package Unit9_Inheritance.Lab;
 
 public class WorkoutPlan {
     private Workout[][] workouts;
+    private int curWeek;
     private int workoutsCompleted;
     private int workoutsSkipped;
     private int nextWorkoutNum;
@@ -14,6 +15,7 @@ public class WorkoutPlan {
 
     public WorkoutPlan(int weeks) {
         this.workouts = new Workout[weeks][7];
+        this.curWeek = 0;
         this.workoutsCompleted = 0;
         this.workoutsSkipped = 0;
         this.nextWorkoutNum = 0;
@@ -81,6 +83,32 @@ public class WorkoutPlan {
     }
 
     public void workoutNextWeek(){
-        
+        for (int i = 0; i < workouts[0].length; i++) {
+            int random = (int)(Math.random() * 9)+1;
+            if(random < 2){
+                System.out.println("Workout Number " + this.nextWorkoutNum + " was skipped");
+                this.nextWorkoutNum++;
+                this.workoutsSkipped++;
+            }else{
+                this.totalCals += workouts[curWeek][i].startExercise();
+                this.totalMins +=  workouts[curWeek][i].getDuration();
+                this.workoutsCompleted++;
+            }
+        }
+        curWeek++;
     }
+
+
+    public int getCurWeek() { return curWeek; }
+    public void setCurWeek(int curWeek) { this.curWeek = curWeek; }
+    public int getWorkoutsCompleted() { return workoutsCompleted; }
+    public void setWorkoutsCompleted(int workoutsCompleted) { this.workoutsCompleted = workoutsCompleted; }
+    public int getWorkoutsSkipped() { return workoutsSkipped; }
+    public void setWorkoutsSkipped(int workoutsSkipped) { this.workoutsSkipped = workoutsSkipped; }
+    public int getNextWorkoutNum() { return nextWorkoutNum; }
+    public void setNextWorkoutNum(int nextWorkoutNum) { this.nextWorkoutNum = nextWorkoutNum; }
+    public int getTotalCals() { return totalCals; }
+    public void setTotalCals(int totalCals) { this.totalCals = totalCals; }
+    public int getTotalMins() { return totalMins; }
+    public void setTotalMins(int totalMins) { this.totalMins = totalMins; }
 }
