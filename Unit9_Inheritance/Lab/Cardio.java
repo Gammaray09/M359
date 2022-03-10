@@ -15,7 +15,11 @@ public class Cardio extends Workout{
 
     @Override
     public String toString() {
-        return "Workout#"+super.getWorkoutNum() + "\t\t" + super.getName() + "\t" + super.getDuration();
+        if(super.getWorkoutNum() >= 10) {
+            return "Workout #" + super.getWorkoutNum() + ":\t" + super.getName() + "\t\t" + super.getDuration();
+        }else{
+            return "Workout #" + super.getWorkoutNum() + ":\t\t" + super.getName() + "\t\t" + super.getDuration();
+        }
     }
 
     @Override
@@ -23,6 +27,8 @@ public class Cardio extends Workout{
         double calPerMile = (Math.random() * 60) + 80;
         return (int)(calPerMile *this.distance);
     }
+
+
 
     public double getDistance() {return distance;}
     public void setDistance(double distance) {this.distance = distance;}

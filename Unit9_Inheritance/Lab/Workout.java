@@ -22,6 +22,8 @@ public class Workout {
         return "Workout#"+this.workoutNum + "\t\t" + this.name + "\t" + this.duration;
     }
 
+
+
     public String getName() {return name;}
     public void setName(String name) {this.name = name;}
     public int getWorkoutNum() {return workoutNum;}

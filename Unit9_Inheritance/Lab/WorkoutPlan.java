@@ -18,16 +18,16 @@ public class WorkoutPlan {
         this.curWeek = 0;
         this.workoutsCompleted = 0;
         this.workoutsSkipped = 0;
-        this.nextWorkoutNum = 0;
+        this.nextWorkoutNum = 1;
         this.totalCals = 0;
         this.totalMins = 0;
     }
     
     
-    private void createPlan(){
+    public void createPlan(){
         for (int row = 0; row < workouts.length; row++) {
             for (int col = 0; col < workouts[0].length; col++) {
-                int random = (int)(Math.random() * 2) + 1;
+                int random = (int)(Math.random() * 3) + 1;
                 if(random == CARDIO){
                     workouts[row][col] = createCardio();
                 }
@@ -64,11 +64,15 @@ public class WorkoutPlan {
 
 
     public String toString() {
-        String output = "*** CURRENT PROGRESS ***\n";
-        output += "Number of workouts completed:\t" + this.workoutsCompleted + "\n";
-        output += "Number of workouts skipped:\t" + this.workoutsSkipped + "\n";
-        output += "Total minutes of exercise:\t" + this.totalMins + "\n";
-        output += "Total calories burned:\t" + this.totalCals + "\n";
+        String output = "";
+        for (int row = 0; row < workouts.length; row++) {
+            output += "*** WEEK #" + (row + 1) +" ***\n";
+            output += "WORKOUT\tNUM\t\tNAME\t\tMINUTES\n";
+            for (int col = 0; col < workouts[0].length; col++) {
+                output += workouts[row][col] + "\n";
+            }
+            output+= "\n";
+        }
         return output;
     }
 
@@ -111,4 +115,9 @@ public class WorkoutPlan {
     public void setTotalCals(int totalCals) { this.totalCals = totalCals; }
     public int getTotalMins() { return totalMins; }
     public void setTotalMins(int totalMins) { this.totalMins = totalMins; }
+
+
+
+
+
 }

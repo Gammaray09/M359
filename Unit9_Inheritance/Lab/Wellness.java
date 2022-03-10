@@ -10,7 +10,11 @@ public class Wellness extends Workout{
 
     @Override
     public String toString() {
-        return "Workout#"+super.getWorkoutNum() + "\t\t" + super.getName() + "\t" + super.getDuration();
+        if(super.getWorkoutNum() >= 10) {
+            return "Workout #" + super.getWorkoutNum() + ":\t" + super.getName() + "\t" + super.getDuration();
+        }else{
+            return "Workout #" + super.getWorkoutNum() + ":\t\t" + super.getName() + "\t" + super.getDuration();
+        }
     }
 
     @Override
