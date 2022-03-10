@@ -79,10 +79,10 @@ public class WorkoutPlan {
 
     public void printProgress() {
         String output = "*** CURRENT PROGRESS ***\n";
-        output += "Number of workouts completed:\t" + this.workoutsCompleted + "\n";
-        output += "Number of workouts skipped:\t" + this.workoutsSkipped + "\n";
-        output += "Total minutes of exercise:\t" + this.totalMins + "\n";
-        output += "Total calories burned:\t" + this.totalCals + "\n";
+        output += "Number of workouts completed:  " + this.workoutsCompleted + "\n";
+        output += "Number of workouts skipped:  " + this.workoutsSkipped + "\n";
+        output += "Total minutes of exercise:  " + this.totalMins + "\n";
+        output += "Total calories burned:  " + this.totalCals + "\n";
         System.out.println(output);
     }
 

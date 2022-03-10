@@ -9,10 +9,24 @@ public class WorkoutDriver {
         System.out.println("Welcome to Workout planner!");
         System.out.print("How many weeks do you want to workout for? ");
         int weeks = input.nextInt();
+        input.nextLine();
 
         WorkoutPlan workoutSchedule = new WorkoutPlan(weeks);
         workoutSchedule.createPlan();
         System.out.println(workoutSchedule);
+
+        Boolean endProgram = true;
+        while (endProgram){
+            System.out.print("Ready to start a workout week? ");
+            String userInput = input.nextLine();
+            if(userInput.equalsIgnoreCase("yes")){
+                workoutSchedule.workoutNextWeek();
+                workoutSchedule.printProgress();
+            }else{
+                break;
+            }
+        }
+
     }
 
 
