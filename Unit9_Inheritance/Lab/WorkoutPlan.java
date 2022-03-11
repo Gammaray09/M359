@@ -14,6 +14,8 @@ public class WorkoutPlan {
     int WELLNESS = 3;
     public static final String BOXING = "\033[0;51m";   // BLACK
     public static final String RESET = "\033[0m";  // Text Reset
+    public static final String LIGHT_BLUE = "\033[38;2;120;172;255m"; //LIGHT BLUE
+    public static final String YELLOW_BRIGHT = "\033[0;93m"; // YELLOW
 
     public WorkoutPlan(int weeks) {
         this.workouts = new Workout[weeks][7];
@@ -68,8 +70,8 @@ public class WorkoutPlan {
     public String toString() {
         String output = "";
         for (int row = 0; row < workouts.length; row++) {
-            output += "*** WEEK #" + (row + 1) +" ***\n";
-            output += "WORKOUT\tNUM\t\tNAME\t\tMINUTES\n";
+            output += YELLOW_BRIGHT + "*** WEEK #" + (row + 1) +" ***\n" + RESET;
+            output += LIGHT_BLUE + "WORKOUT\tNUM\t\tNAME\t\tMINUTES\n" + RESET;
             for (int col = 0; col < workouts[0].length; col++) {
                 output += workouts[row][col] + "\n";
             }
@@ -80,11 +82,11 @@ public class WorkoutPlan {
 
 
     public void printProgress() {
-        String output = "*** CURRENT PROGRESS ***\n";
-        output += "Number of workouts completed:  " + this.workoutsCompleted + "\n";
-        output += "Number of workouts skipped:  " + this.workoutsSkipped + "\n";
-        output += "Total minutes of exercise:  " + this.totalMins + "\n";
-        output += "Total calories burned:  " + this.totalCals + "\n";
+        String output = "";
+        output += LIGHT_BLUE +"Number of workouts completed:  "+RESET + this.workoutsCompleted + "\n";
+        output += LIGHT_BLUE +"Number of workouts skipped:  " +RESET+ this.workoutsSkipped + "\n";
+        output += LIGHT_BLUE +"Total minutes of exercise:  " +RESET+ this.totalMins + "\n";
+        output += LIGHT_BLUE+"Total calories burned:  " +RESET+ this.totalCals + "\n";
         System.out.println(output);
     }
 

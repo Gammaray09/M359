@@ -5,10 +5,11 @@ public class Cardio extends Workout{
     private double speed;
 
 
+
     public Cardio(
             int workoutNum, int duration, double speed) {
         super("Running", workoutNum, duration);
-        this.distance = speed * duration;
+        this.distance = speed * (duration/60);
         this.speed = speed;
     }
 
