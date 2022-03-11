@@ -12,6 +12,8 @@ public class WorkoutPlan {
     int CARDIO = 1;
     int STRENGTH = 2;
     int WELLNESS = 3;
+    public static final String BOXING = "\033[0;51m";   // BLACK
+    public static final String RESET = "\033[0m";  // Text Reset
 
     public WorkoutPlan(int weeks) {
         this.workouts = new Workout[weeks][7];
@@ -90,7 +92,7 @@ public class WorkoutPlan {
         for (int i = 0; i < workouts[0].length; i++) {
             int random = (int)(Math.random() * 9)+1;
             if(random < 2){
-                System.out.println("Workout Number " + this.nextWorkoutNum + " was skipped");
+                System.out.println("\n"+BOXING + "Workout Number " + this.nextWorkoutNum + " was skipped" + RESET);
                 this.nextWorkoutNum++;
                 this.workoutsSkipped++;
             }else{
