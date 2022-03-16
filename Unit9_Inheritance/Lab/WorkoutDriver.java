@@ -41,8 +41,7 @@ public class WorkoutDriver {
 
 
         //Puts user in a while loop until all weeks have been finished
-        Boolean endProgram = true;
-        while (endProgram){
+        while (true){
             try {
 
                 tryAgain = true;
@@ -80,11 +79,9 @@ public class WorkoutDriver {
     }
 
 
-
-
-
-
-
+    /**
+     * Prints the intro logo for the program
+     */
     public static void printLogo(){
         System.out.println(PURPLE + " _       __              __                  __ \n" +
                 "| |     / /____   _____ / /__ ____   __  __ / /_\n" +
