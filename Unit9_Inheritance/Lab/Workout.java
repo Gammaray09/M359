@@ -6,7 +6,7 @@ public class Workout {
     private int workoutNum;
     private int duration;
 
-    //constructor takes in a name, workoutnum, and duration
+    //constructor takes in a name, workoutNum, and duration
     public Workout(String name, int workoutNum, int duration) {
         this.name = name;
         this.workoutNum = workoutNum;
@@ -38,5 +38,3 @@ public class Workout {
     public int getWorkoutNum() {return workoutNum;}
     public int getDuration() {return duration;}
 }
-
-bfeaI
