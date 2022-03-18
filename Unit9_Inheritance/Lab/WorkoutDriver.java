@@ -21,9 +21,13 @@ public class WorkoutDriver {
             try {
                 System.out.print("How many weeks do you want to workout for? ");
                 weeks = input.nextInt();
-                tryAgain = false;
+                if(weeks < 0){
+                    throw new InputMismatchException();
+                }else{
+                    tryAgain = false;
+                }
             // user did not put in valid integer
-            } catch (InputMismatchException e){
+            } catch (InputMismatchException e ){
                 System.out.println("\nTry again, please type in a valid integer");
             }
             //dummy read
@@ -31,9 +35,22 @@ public class WorkoutDriver {
         }
 
 
-        System.out.println("\n\nYour workout plan has been created. Lets do this!" + RESET + "\n");
         //creates WorkoutPlan object
+        while (tryAgain){
+            try {
+                System.out.print("How many weeks do you want to workout for? ");
+                weeks = input.nextInt();
+                tryAgain = false;
+                // user did not put in valid integer
+            } catch (InputMismatchException e ){
+                System.out.println("\nTry again, please type in a valid integer");
+            }
+            //dummy read
+            input.nextLine();
+        }
         WorkoutPlan workoutSchedule = new WorkoutPlan(weeks);
+        System.out.println("\n\nYour workout plan has been created. Lets do this!" + RESET + "\n");
+
         // creates plan for workoutSchedule object
         workoutSchedule.createPlan();
         //Prints out schedule
@@ -48,9 +65,9 @@ public class WorkoutDriver {
                 //Puts user in a while loop until a valid input has been inputted
                 while (tryAgain){
                     try {
-                        System.out.print(GREEN_BRIGHT+"Ready to start a workout week?(yes/no) " +RESET);
+                        System.out.print(GREEN_BRIGHT+"Type Start to start the next workout: " +RESET);
                         String userInput = input.nextLine();
-                        if(userInput.equalsIgnoreCase("yes")){
+                        if(userInput.equalsIgnoreCase("start")){
                             //Calculated data for next week
                             workoutSchedule.workoutNextWeek();
                             System.out.println(YELLOW_BRIGHT + "\n*** CURRENT PROGRESS ***" + RESET);
@@ -64,7 +81,7 @@ public class WorkoutDriver {
                         }
                         tryAgain = false;
                     }catch (InputMismatchException e){
-                        System.out.println(GREEN_BRIGHT+"\nTry Again,please type yes or no"+RESET);
+                        System.out.println(GREEN_BRIGHT+"\nTry Again, please type start"+RESET);
                     }
                 }
 
