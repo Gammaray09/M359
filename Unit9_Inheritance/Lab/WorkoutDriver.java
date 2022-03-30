@@ -88,7 +88,7 @@ public class WorkoutDriver {
             } catch (ArrayIndexOutOfBoundsException e){
                 System.out.println(YELLOW_BRIGHT + "*** FINAL PROGRESS ***" + RESET);
                 workoutSchedule.printProgress();
-                System.out.println(GREEN_BRIGHT+"Thank you for using Workout Planner" + RESET);
+                System.out.println(GREEN_BRIGHT+"Nice Job! Hope to see you again!" + RESET);
                 break;
             }
         }

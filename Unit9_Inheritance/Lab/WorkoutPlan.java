@@ -146,12 +146,4 @@ public class WorkoutPlan {
         }
         curWeek++;
     }
-
-
-
-
-
-
-
-
 }

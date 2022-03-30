@@ -38,9 +38,4 @@ public class Cardio extends Workout{
     public int startExercise(){
         double calPerMile = (Math.random() * 60) + 80;
         return (int)(calPerMile *this.distance);
-    }
-
-
-
-
-}
+    } }
