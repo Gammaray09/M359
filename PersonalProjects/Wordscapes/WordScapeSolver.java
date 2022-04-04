@@ -2,7 +2,7 @@ package PersonalProjects.Wordscapes;
 
 public class WordScapeSolver {
     public static void main(String[] args) {
-        String letters = "cakb";
+        String letters = "force";
         solver("",letters);
     }
 
@@ -16,5 +16,9 @@ public class WordScapeSolver {
             solver(root + l.charAt(i), l.substring(0, i) + l.substring(i + 1));
         }
 
+    }
+
+    public static boolean checkWord(String word){
+        return false;
     }
 }
