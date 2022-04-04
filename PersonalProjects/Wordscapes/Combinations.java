@@ -12,7 +12,7 @@ public class Combinations {
 
     public static void main (String args[])
     {
-        Combinations combobj= new Combinations("letter");
+        Combinations combobj= new Combinations("kard");
         System.out.println("");
         System.out.println("");
         System.out.println("All possible combinations are :  ");
