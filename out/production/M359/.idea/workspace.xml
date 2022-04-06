@@ -2,11 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f6cded55-f257-4619-aec7-582a41f9c545" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PersonalProjects/Wordscapes/WordScapeSolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalProjects/Wordscapes/WordScapeSolver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PersonalProjects/Wordscapes/formater.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PersonalProjects/Wordscapes/test.java" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalProjects/Wordscapes/test.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/M359/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/M359/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/M359/PersonalProjects/Wordscapes/WordScapeSolver.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/M359/PersonalProjects/Wordscapes/WordScapeSolver.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/M359/PersonalProjects/Wordscapes/test.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/M359/PersonalProjects/Wordscapes/test.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,9 +147,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.WordScapeSolver" />
+        <item itemvalue="Application.test" />
         <item itemvalue="Application.formater" />
         <item itemvalue="Application.FileTest" />
-        <item itemvalue="Application.test" />
         <item itemvalue="Application.Combinations" />
       </list>
     </recent_temporary>
@@ -186,15 +189,25 @@
           <line>22</line>
           <option name="timeStamp" value="8" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/PersonalProjects/Wordscapes/WordScapeSolver.java</url>
+          <line>57</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/PersonalProjects/Wordscapes/WordScapeSolver.java</url>
+          <line>60</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/M359$StudentTester.ic" NAME="StudentTester Coverage Results" MODIFIED="1632445124706" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>Unit3_Booleans_IfStatements.examples.Student.*</FILTER>
-    </SUITE>
     <SUITE FILE_PATH="coverage/M359$ChevyDriverStudent.ic" NAME="ChevyDriverStudent Coverage Results" MODIFIED="1632445960802" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>Unit3_Booleans_IfStatements.Homework.ChevroletLab.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/M359$StudentTester.ic" NAME="StudentTester Coverage Results" MODIFIED="1632445124706" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>Unit3_Booleans_IfStatements.examples.Student.*</FILTER>
     </SUITE>
   </component>
 </project>

@@ -2,64 +2,83 @@ package PersonalProjects.Wordscapes;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.sql.Array;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class WordScapeSolver {
+    //final variables
+    public static final int filterNum = 3;
+    public static final String BOXING = "\033[0;51m";   // BLACK
+    public static final String RESET = "\033[0m";  // Text Reset
 
     public static void main(String[] args) throws FileNotFoundException{
-        String[] arr= new Array();
+        // creates array for dictionary
+        ArrayList<String> dictionary = new ArrayList<>();
+
+        //opens scanner and file
         File words = new File("words_alpha.txt");
         Scanner scnr = new Scanner(words);
 
+
+        //adds all words to dictionary
         while(scnr.hasNextLine()){
             String curword = scnr.nextLine();
-
-            if(curword.equalsIgnoreCase(word)){
-                exist = true;
-                break;
-            }
+            dictionary.add(curword);
         }
 
-        String letters = "epsru";
-        solver("",letters);
+        //letter input
+        String letters = "backed";
+
+        //sorter function call
+        solver(dictionary,"",letters);
     }
 
 
-    public static void solver(String root, String l)throws FileNotFoundException{
+    public static void solver(ArrayList<String> wordArray, String root, String l){
+        //base case
         if(l.length() == 0){
-            if(checkWord(root) == true && root.length() > 3){
-                System.out.println(root);
+            //if word is within filter length
+            if(root.length() > filterNum - 1 && root.length() <= filterNum ){
+                //searches for word in array
+                int position = binarySearch(wordArray,0, wordArray.size(), root);
+                if(position != -1){
+                    System.out.println(BOXING + wordArray.get(position) + RESET);
+                }
             }
         }
+
+        //recursive loop
         for (int i = 0; i < l.length(); i++) {
-            if(checkWord(root) == true && root.length() > 3){
-                System.out.println(root);
+            //if word is within filter length
+            if(root.length() > filterNum - 1 && root.length() <= filterNum){
+                //searches for word in array
+                int position = binarySearch(wordArray,0, wordArray.size(), root);
+                if(position != -1){
+                    System.out.println(wordArray.get(position));
+                }
             }
-            solver(root + l.charAt(i), l.substring(0, i) + l.substring(i + 1));
+            solver(wordArray,root + l.charAt(i), l.substring(0, i) + l.substring(i + 1));
         }
 
     }
 
-    public static boolean checkWord(String word) throws FileNotFoundException {
-        File words = new File("words_alpha.txt");
-        Scanner scnr = new Scanner(words);
 
 
-        boolean exist = false;
 
-        while(scnr.hasNextLine()){
-            String curword = scnr.nextLine();
+    public static int binarySearch(ArrayList<String> wordArray, int lowPosition, int highPosition, String target){
+        int midPosition;
 
-            if(curword.equalsIgnoreCase(word)){
-                exist = true;
-                break;
+        if(lowPosition > highPosition){
+            return -1;
+        }else{
+            midPosition = (lowPosition + highPosition)/2;
+            if(wordArray.get(midPosition).compareToIgnoreCase(target) < 0){
+                return binarySearch(wordArray, midPosition + 1,  highPosition,  target);
             }
+            if(wordArray.get(midPosition).compareToIgnoreCase(target) > 0){
+                return binarySearch(wordArray,  lowPosition,  midPosition -1,  target);
+            }
+            return midPosition;
         }
-        return exist;
-    }
-
-
-    public static void binarySearch() throws FileNotFoundException{
     }
 }
