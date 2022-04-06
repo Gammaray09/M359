@@ -7,13 +7,14 @@ import java.util.Scanner;
 
 public class WordScapeSolver {
     //final variables
-    public static final int filterNum = 3;
+    public static final int filterNum = 4;
     public static final String BOXING = "\033[0;51m";   // BLACK
     public static final String RESET = "\033[0m";  // Text Reset
 
     public static void main(String[] args) throws FileNotFoundException{
         // creates array for dictionary
         ArrayList<String> dictionary = new ArrayList<>();
+        ArrayList<String> possibleWords = new ArrayList<>();
 
         //opens scanner and file
         File words = new File("words_alpha.txt");
@@ -27,22 +28,23 @@ public class WordScapeSolver {
         }
 
         //letter input
-        String letters = "backed";
+        String letters = "breaks";
 
         //sorter function call
-        solver(dictionary,"",letters);
+        solver(dictionary,possibleWords,"",letters);
     }
 
 
-    public static void solver(ArrayList<String> wordArray, String root, String l){
+    public static void solver(ArrayList<String> dictionary, ArrayList<String> wordArray, String root, String l){
         //base case
         if(l.length() == 0){
             //if word is within filter length
             if(root.length() > filterNum - 1 && root.length() <= filterNum ){
                 //searches for word in array
-                int position = binarySearch(wordArray,0, wordArray.size(), root);
+                int position = binarySearch(dictionary,0, dictionary.size(), root);
+
                 if(position != -1){
-                    System.out.println(BOXING + wordArray.get(position) + RESET);
+                    System.out.println(BOXING + dictionary.get(position) + RESET);
                 }
             }
         }
@@ -52,12 +54,13 @@ public class WordScapeSolver {
             //if word is within filter length
             if(root.length() > filterNum - 1 && root.length() <= filterNum){
                 //searches for word in array
-                int position = binarySearch(wordArray,0, wordArray.size(), root);
-                if(position != -1){
-                    System.out.println(wordArray.get(position));
+                int position = binarySearch(dictionary,0, dictionary.size(), root);
+                
+                if(position != -1 ){
+                    System.out.println(dictionary.get(position));
                 }
             }
-            solver(wordArray,root + l.charAt(i), l.substring(0, i) + l.substring(i + 1));
+            solver(dictionary, wordArray,root + l.charAt(i), l.substring(0, i) + l.substring(i + 1));
         }
 
     }
@@ -80,5 +83,26 @@ public class WordScapeSolver {
             }
             return midPosition;
         }
+    }
+
+
+    /**
+     *
+     * @param wordArray
+     * @param word
+     * @return returns true if word is in array and false if word is not in array
+     */
+    public static Boolean checkWord(ArrayList<String> wordArray, String word){
+        boolean wordExist = false;
+        for(String s : wordArray) {
+            if(s.equalsIgnoreCase(word)){
+                wordExist = false;
+            }else{
+                wordArray.add(word);
+                wordExist = true;
+                break;
+            }
+        }
+        return wordExist;
     }
 }

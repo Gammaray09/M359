@@ -9,6 +9,7 @@
       <change beforePath="$PROJECT_DIR$/PersonalProjects/Wordscapes/test.java" beforeDir="false" afterPath="$PROJECT_DIR$/PersonalProjects/Wordscapes/test.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/M359/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/M359/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/M359/PersonalProjects/Wordscapes/WordScapeSolver.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/M359/PersonalProjects/Wordscapes/WordScapeSolver.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/M359/PersonalProjects/Wordscapes/formater.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/M359/PersonalProjects/Wordscapes/test.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/M359/PersonalProjects/Wordscapes/test.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -188,16 +189,6 @@
           <url>file://$PROJECT_DIR$/Unit7_ArrayList/Examples/Notes7_5/StoreTester.java</url>
           <line>22</line>
           <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/PersonalProjects/Wordscapes/WordScapeSolver.java</url>
-          <line>57</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/PersonalProjects/Wordscapes/WordScapeSolver.java</url>
-          <line>60</line>
-          <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
