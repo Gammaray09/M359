@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class WordScapeSolver {
     //final variables
-    public static final int filterNum = 4;
+    public static final int filterNum = 3;
     public static final String BOXING = "\033[0;51m";   // BLACK
     public static final String RESET = "\033[0m";  // Text Reset
 
@@ -28,7 +28,7 @@ public class WordScapeSolver {
         }
 
         //letter input
-        String letters = "breaks";
+        String letters = "budot";
 
         //sorter function call
         solver(dictionary,possibleWords,"",letters);
@@ -44,7 +44,9 @@ public class WordScapeSolver {
                 int position = binarySearch(dictionary,0, dictionary.size(), root);
 
                 if(position != -1){
-                    System.out.println(BOXING + dictionary.get(position) + RESET);
+                    if(!checkWord(wordArray,dictionary.get(position))){
+                        System.out.println(dictionary.get(position));
+                    }
                 }
             }
         }
@@ -55,9 +57,11 @@ public class WordScapeSolver {
             if(root.length() > filterNum - 1 && root.length() <= filterNum){
                 //searches for word in array
                 int position = binarySearch(dictionary,0, dictionary.size(), root);
-                
-                if(position != -1 ){
-                    System.out.println(dictionary.get(position));
+
+                if(position != -1){
+                    if(checkWord(wordArray,dictionary.get(position))){
+                        System.out.println( dictionary.get(position));
+                    }
                 }
             }
             solver(dictionary, wordArray,root + l.charAt(i), l.substring(0, i) + l.substring(i + 1));
@@ -93,16 +97,13 @@ public class WordScapeSolver {
      * @return returns true if word is in array and false if word is not in array
      */
     public static Boolean checkWord(ArrayList<String> wordArray, String word){
-        boolean wordExist = false;
         for(String s : wordArray) {
             if(s.equalsIgnoreCase(word)){
-                wordExist = false;
+                return true;
             }else{
                 wordArray.add(word);
-                wordExist = true;
-                break;
             }
         }
-        return wordExist;
+        return false;
     }
 }
