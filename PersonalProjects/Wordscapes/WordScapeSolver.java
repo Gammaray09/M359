@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class WordScapeSolver {
     //final variables
-    public static final int filterNum = 3;
+    public static final int filterNum = 5;
     public static final String BOXING = "\033[0;51m";   // BLACK
     public static final String RESET = "\033[0m";  // Text Reset
 
@@ -28,7 +28,7 @@ public class WordScapeSolver {
         }
 
         //letter input
-        String letters = "budot";
+        String letters = "testur";
 
         //sorter function call
         solver(dictionary,possibleWords,"",letters);
@@ -44,9 +44,7 @@ public class WordScapeSolver {
                 int position = binarySearch(dictionary,0, dictionary.size(), root);
 
                 if(position != -1){
-                    if(!checkWord(wordArray,dictionary.get(position))){
-                        System.out.println(dictionary.get(position));
-                    }
+                    System.out.println( dictionary.get(position));
                 }
             }
         }
@@ -59,9 +57,7 @@ public class WordScapeSolver {
                 int position = binarySearch(dictionary,0, dictionary.size(), root);
 
                 if(position != -1){
-                    if(checkWord(wordArray,dictionary.get(position))){
-                        System.out.println( dictionary.get(position));
-                    }
+                    System.out.println( dictionary.get(position));
                 }
             }
             solver(dictionary, wordArray,root + l.charAt(i), l.substring(0, i) + l.substring(i + 1));
